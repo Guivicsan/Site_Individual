@@ -102,72 +102,70 @@
     padding-top: 100px;
   }
   .boxtext {
-    padding: 0 200px 0 200px;
+    padding: 0 170px 0 170px;
+    text-align: initial;
   }
-  
-  /* ------sobre nós-------- */
-  
-  .sobrenos {
-    width: 80%;
-    margin: auto;
+  .boxtext p{
+      color: #777;
+      font-size: 14px;
+      line-height: 22px;
+      padding: 10px 10px 10px 0;
+  }
+  .boxtext hr{
+      width: 100%;
+      height: 1px;
+      background-color: #8d8d8dc2;
+      border: none;
+      margin: 20px 0 20px 0;
+  }
+  .IMC-tabela {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 5px 0 10px 0;
+  }
+  .box {   
+      width: 19.5%;
+      text-align: center;
+      margin-top: 3px;
+      background-color: #e2e1e1;
+  }
+  .box1 {
+    width: 19.5%;
     text-align: center;
-    padding-bottom: 100px;
-  }
-  h1 {
-    font-size: 36px;
-    font-weight: 600;
-  }
-  p {
-    color: #777;
+    margin-top: 3px;
+    background-color: #2e2e2e;
+ }
+  .box p, .box1 p{
+    color: #f44336;
     font-size: 14px;
     line-height: 22px;
-    padding: 10px;
   }
-  .row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
+  /*---------IMC---------- */
+  .calculoIMC {
+      border: 3px solid red;
+      display: flex;
+      align-items: center;
   }
-  .sobrenos-col {
-    flex-basis: 31%;
-    background: #fff3f3;
-    border-radius: 10px;
-    margin-bottom: 5%;
-    padding: 20px 12px;
-    box-sizing: border-box;
+  .IMC-col1 {
+      border:3px solid blue;
+      padding: 20px;
   }
-  h3 {
-    text-align: center;
-    font-weight: 600;
-    margin: 10px 0;
+  .IMC-col2 {
+      border: 3px solid purple;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
   }
-  .sobrenos-col:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+  .box-inputs input{
+      width: 100%;
   }
-  .img-exerc {
-    width: 50%;
-  }
-  .box-exercise {
-    background-color: #2e2e2e;
-    padding: 20px;
-    width: 30%;
-  }
-  .importanciaexercicios .img-1 {
+  .box-inputs button {
+    align-self: center;
     width: 100%;
   }
-  .conatiner-exerc {
-    text-align: left;
-    margin: 40px 0 100px 0;
-    display: flex;
-    justify-content: center;
-  }
-  .box-exerc-text h2 {
-    color: #fbfbfb;
-    font-size: 25px;
-  }
-  .box-exerc-text p {
-    color: #bbbbbb;
-  }
+  /* --------------------- */
   @media (max-width: 700px) {
     .row {
       flex-direction: column;

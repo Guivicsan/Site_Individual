@@ -1,84 +1,204 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AcquaTec | Simulador</title>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/simulador.css" />
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="./js/funcoes.js"></script>
-
-    <link rel="icon" href="./assets/icon/favicon.ico">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>AcquaTec | Página Inicial</title>
     <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
 
-<body>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="./assets/imgs/Logo.png" /></a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="./index.html">HOME</a></li>
+            <li><a href="./simulador.html">SIMULADOR</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./login.html">SIGN IN</a></li>
+            <li><a href="./cadastro.html">SIGN UP</a></li>
+          </ul>
+        </div>
+      </nav>
 
-    <!--header inicio-->
-    <div class="header">
-        <div class="container">
-            <h1 class="titulo">AcquaTec</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">Inicial</a>
-                </li>
-                <li class="agora">Simulador</li>
-                <li>|</li>
-                <li>
-                    <a href="./login.html">Login</a>
-                </li>
-                <li>
-                    <a href="./login.html">Cadastro</a>
-                </li>
+      <div class="text-box">
+        <h1>
+            Calcule seu IMC
+        </h1>
+      </div>
+    </section>
+
+    <section class="importanciaexercicios">
+      <div class="boxtext">
+      <h1>
+        Calcule seu IMC aqui no Fitness vic.
+      </h1>
+      <p>
+        O índice de massa corporal (IMC) é um dos parâmetros mais utilizados para classificar sobrepeso e obesidade em adultos. Ele é calculado a partir da divisão do peso (em quilos) pela altura (em metros) ao quadrado.
+      </p>
+      <p>
+        <b>Quanto mais alto o IMC, maiores os riscos de doenças como diabetes, hipertensão, apneia do sono, doenças de articulações, entre outras.</b>
+      </p>
+      <hr>
+      <h1>
+        Como medir o Índice de Massa Corporal (IMC)?
+      </h1>
+      <p>
+        Para diagnosticar a obesidade, é preciso começar calculando o Índice de Massa Corporal (IMC).
+      </p>
+      <div class="IMC-tabela">
+        <div class="box">
+            <p>
+                <b>IMC</b>
+            </p>
+        </div>
+        <div class="box">
+            <p>
+                Entre 18,5 e 24,9
+            </p>
+        </div>
+        <div class="box">
+            <p>
+                Entre 25,0 e 29,9
+            </p>
+        </div>
+        <div class="box">
+            <p>
+                Acima de 30,0
+            </p>
+        </div>
+        <div class="box">
+            <p>
+                Maior que 40,0
+            </p>
+        </div>
+        <div class="box1">
+            <p>
+               <b>Classificação</b>
+            </p>
+        </div>
+        <div class="box1">
+            <p>
+                Normal
+            </p>
+        </div>
+        <div class="box1">
+            <p>
+                Sobrepeso
+            </p>
+        </div>
+        <div class="box1">
+            <p>
+                Obesidade
+            </p>
+        </div>
+        <div class="box1">
+            <p>
+                Obesidade grave
+            </p>
+        </div>
+    </div>
+    <p>
+        O cálculo pode ser usado para ambos os sexos, porpem é importante lembrar que ele serve como uma estimativa, já que o grau de gordura entre indivíduos pode diferir. Desta forma, seu uso isolado não diz muito sobre a saúde do paciente, uma questão que pode ser resolvida ao combiná-lo com um estudo sobre as medidas da distribuição de gordura.
+    </p>
+    <hr>
+    <h1 style="color: #f44336; text-align: center;">
+        Calcule seu IMC
+    </h1>
+    <div class="calculoIMC">
+        <div id="exibir" class="IMC-col1">
+            <h1>Ainda não sabe qual o seu Índice de Massa Corporal (IMC)?</h1>
+            <p>Faça o cálculo aqui mesmo e conheça mais sobre o seu corpo.</p>
+        </div>
+        <div class="IMC-col2">
+            <h3>Para calcular o IMC (Índice de Massa Corporal), basta preencher os campos abaixo.</h3>
+            <div class="box-inputs">
+               <label>Seu peso</label><br>
+                <input id="input_peso"><br>
+               <label>Sua altura</label><br>
+                <input id="input_altura"><br>
+                <button class="btnIMC" onclick="calculo()">Calcula IMC</button><br>
+            </div>
+        </div>
+    </div>    
+    </section>
+    <!----------footer------------->
+    <section class="footer">
+      <div class="conatiner">
+        <div class="row">
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="#">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="#">affiliate program</a></li>
             </ul>
+          </div>
+          <div class="footer-col">
+            <h4>get help</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">shipping</a></li>
+              <li><a href="#">returns</a></li>
+              <li><a href="#">order status</a></li>
+              <li><a href="#">payment options</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="#">watch</a></li>
+              <li><a href="#">bag</a></li>
+              <li><a href="#">shoes</a></li>
+              <li><a href="#">dress</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <li><a href="#"><img src="./assets/imgs/icon-facebook.png" width="23%"></a></li>
+              <li><a href="#"><img src="./assets/imgs/icon-twitter.png" width="45%"></a></li>
+              <li><a href="#"><img src="./assets/imgs/icon-instagram.png" width="45%"></a></li>
+              <li><a href="#"><img src="./assets/imgs/icon-linkedin.png" width="40%"></a></li>
+            </div>
+          </div>
         </div>
-    </div>
-
-
-    <!-- simulador inicio -->
-    <div class="simulador">
-        <div class="container">
-            <h2>Simulador</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium tempora architecto sint fugit
-                dolorum? Ipsum laborum magnam similique labore, voluptate amet reprehenderit rem ab blanditiis quisquam
-                laboriosam eaque alias. Reiciendis. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Accusantium tempora architecto sint fugit dolorum? Ipsum laborum magnam similique labore, voluptate amet
-                reprehenderit rem ab blanditiis quisquam laboriosam eaque alias. Reiciendis.</p>
-
-        </div>
-    </div>
-    <!-- simulador fim -->
-
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por um aluno &hearts;SPTech &copy; 2022</h4>
-        </div>
-    </div>
-    <!--footer fim-->
-
-
-</body>
-
+      </div>
+    </section>
+  </body>
 </html>
+
+<script>
+  var peso = 0
+  var altura = 0
+  function calculo() {
+      var peso = Number(input_peso.value)
+      var altura = Number(input_altura.value)
+
+      var IMC = (peso / ((altura * altura) / 10000)).toFixed(2);
+
+      if (IMC < 18.5) {
+          exibir.innerHTML = `${IMC} Peso baixo`
+      } else if (IMC <= 24.9 ) {
+          exibir.innerHTML = `${IMC} Peso normal ou adequado`
+      } else if (IMC <= 29.9) {
+          exibir.innerHTML = `${IMC} Sobrepeso`
+      } else if (IMC <= 40.0) {
+          exibir.innerHTML = `${IMC} Obesidade`
+      } else {
+          exibir.innerHTML = `${IMC} Obesidade grave`
+      }
+  }
+</script>
