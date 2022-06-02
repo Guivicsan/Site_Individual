@@ -88,22 +88,22 @@
                <b>Classificação</b>
             </p>
         </div>
-        <div class="box1">
+        <div id="normal" class="box1">
             <p>
                 Normal
             </p>
         </div>
-        <div class="box1">
+        <div id="sobrepeso" class="box1">
             <p>
                 Sobrepeso
             </p>
         </div>
-        <div class="box1">
+        <div id="obesidade" class="box1">
             <p>
                 Obesidade
             </p>
         </div>
-        <div class="box1">
+        <div id="obesidadegrave" class="box1">
             <p>
                 Obesidade grave
             </p>
@@ -113,7 +113,7 @@
         O cálculo pode ser usado para ambos os sexos, porpem é importante lembrar que ele serve como uma estimativa, já que o grau de gordura entre indivíduos pode diferir. Desta forma, seu uso isolado não diz muito sobre a saúde do paciente, uma questão que pode ser resolvida ao combiná-lo com um estudo sobre as medidas da distribuição de gordura.
     </p>
     <hr>
-    <h1 style="color: #f44336; text-align: center;">
+    <h1 style="color: #f44336; text-align: center; margin-bottom: 20px;">
         Calcule seu IMC
     </h1>
     <div class="calculoIMC">
@@ -122,12 +122,12 @@
             <p>Faça o cálculo aqui mesmo e conheça mais sobre o seu corpo.</p>
         </div>
         <div class="IMC-col2">
-            <h3>Para calcular o IMC (Índice de Massa Corporal), basta preencher os campos abaixo.</h3>
+            <h3 style="margin-bottom: 10px;">Para calcular o IMC (Índice de Massa Corporal), basta preencher os campos abaixo.</h3>
             <div class="box-inputs">
                <label>Seu peso</label><br>
-                <input id="input_peso"><br>
+                <input id="input_peso" placeholder="Digite seu peso"><br>
                <label>Sua altura</label><br>
-                <input id="input_altura"><br>
+                <input id="input_altura" placeholder="Digite sua altura"><br>
                 <button class="btnIMC" onclick="calculo()">Calcula IMC</button><br>
             </div>
         </div>
@@ -187,18 +187,28 @@
       var peso = Number(input_peso.value)
       var altura = Number(input_altura.value)
 
+      exibir.innerHTML = "";
+      normal.style = "";
+      sobrepeso.style = "";
+      obesidade.style = "";
+      obesidadegrave.style = "";
+
       var IMC = (peso / ((altura * altura) / 10000)).toFixed(2);
 
       if (IMC < 18.5) {
           exibir.innerHTML = `${IMC} Peso baixo`
       } else if (IMC <= 24.9 ) {
           exibir.innerHTML = `${IMC} Peso normal ou adequado`
+          normal.style.backgroundColor = "#e2e1e1"
       } else if (IMC <= 29.9) {
           exibir.innerHTML = `${IMC} Sobrepeso`
+          sobrepeso.style.backgroundColor = "#e2e1e1"
       } else if (IMC <= 40.0) {
           exibir.innerHTML = `${IMC} Obesidade`
+          obesidade.style.backgroundColor = "#e2e1e1"
       } else {
           exibir.innerHTML = `${IMC} Obesidade grave`
+          obesidadegrave.style.backgroundColor = "#e2e1e1"
       }
   }
 </script>
