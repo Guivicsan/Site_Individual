@@ -93,6 +93,7 @@ nav img {
     max-width: 800px;
     flex-wrap: wrap;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 .col-1, .col-2{
     flex-basis: 50%;
@@ -157,10 +158,21 @@ nav img {
   margin: auto;
   display: none;
 }
-
 .loading-div img {
   height: 50px;
   width: 50px;
 }
-
+@media (max-width: 700px) {
+  .nav-links ul li a {
+    font-size: 10px;
+    width: 10px;
+  }
+  nav img {
+    width: 50px;
+  }
+  .sigbup-box {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
   

@@ -64,6 +64,11 @@
             </p>
         </div>
         <div class="box">
+          <p>
+              Menor que 18,5
+          </p>
+      </div>
+        <div class="box">
             <p>
                 Entre 18,5 e 24,9
             </p>
@@ -88,6 +93,11 @@
                <b>Classificação</b>
             </p>
         </div>
+        <div id="magreza" class="box1">
+          <p>
+             Abaixo do peso
+          </p>
+      </div>
         <div id="normal" class="box1">
             <p>
                 Normal
@@ -110,7 +120,7 @@
         </div>
     </div>
     <p>
-        O cálculo pode ser usado para ambos os sexos, porpem é importante lembrar que ele serve como uma estimativa, já que o grau de gordura entre indivíduos pode diferir. Desta forma, seu uso isolado não diz muito sobre a saúde do paciente, uma questão que pode ser resolvida ao combiná-lo com um estudo sobre as medidas da distribuição de gordura.
+        O cálculo pode ser usado para ambos os sexos, porém é importante lembrar que ele serve como uma estimativa, já que o grau de gordura entre indivíduos pode diferir. Desta forma, seu uso isolado não diz muito sobre a saúde do paciente, uma questão que pode ser resolvida ao combiná-lo com um estudo sobre as medidas da distribuição de gordura.
     </p>
     <hr>
     <h1 style="color: #f44336; text-align: center; margin-bottom: 20px;">
@@ -131,7 +141,8 @@
                 <button class="btnIMC" onclick="calculo()">Calcula IMC</button><br>
             </div>
         </div>
-    </div>    
+    </div> 
+    </div>   
     </section>
     <!----------footer------------->
     <section class="footer">
@@ -188,6 +199,7 @@
       var altura = Number(input_altura.value)
 
       exibir.innerHTML = "";
+      magreza.style = "";
       normal.style = "";
       sobrepeso.style = "";
       obesidade.style = "";
@@ -196,18 +208,29 @@
       var IMC = (peso / ((altura * altura) / 10000)).toFixed(2);
 
       if (IMC < 18.5) {
-          exibir.innerHTML = `${IMC} Peso baixo`
+          exibir.innerHTML = `Seu IMC é ${IMC}<br><h3>Abaixo do peso</h3>
+          <br>
+          Você está abaixo do peso ideal. Isso pode ser apenas uma característica pessoal, mas também pode ser um sinal de desnutrição ou de algum problema de saúde.`
+          magreza.style.backgroundColor = "#e2e1e1"
       } else if (IMC <= 24.9 ) {
-          exibir.innerHTML = `${IMC} Peso normal ou adequado`
+          exibir.innerHTML = `Seu IMC é ${IMC}<br><h3>Peso normal</h3>
+          <br>
+          Parabéns, você está com o peso normal. Recomendamos que mantenha hábitos saudáveis em seu dia a dia. Especialistas sugerem ingerir de 4 a 5 porções diárias de frutas, verduras e legumes, além da prática de exercícios físicos.`
           normal.style.backgroundColor = "#e2e1e1"
       } else if (IMC <= 29.9) {
-          exibir.innerHTML = `${IMC} Sobrepeso`
+          exibir.innerHTML = `Seu IMC é ${IMC}<br><h3>Sobrepeso</h3>
+          <br>
+          Atenção! Alguns quilos a mais já são suficientes para que algumas pessoas desenvolvam doenças associadas, como diabetes e hipertensão. É importante rever seus hábitos.`
           sobrepeso.style.backgroundColor = "#e2e1e1"
       } else if (IMC <= 40.0) {
-          exibir.innerHTML = `${IMC} Obesidade`
+          exibir.innerHTML = `Seu IMC é ${IMC}<br><h3>Obesidade</h3>
+          <br>
+          Sinal de alerta! O excesso de peso é fator de risco para desenvolvimento de outros problemas de saúde. A boa notícia é que uma pequena perda de peso já traz benefícios à saúde.`
           obesidade.style.backgroundColor = "#e2e1e1"
       } else {
-          exibir.innerHTML = `${IMC} Obesidade grave`
+          exibir.innerHTML = `Seu IMC é ${IMC}<br><h3>Obesidade grave</h3>
+          <br>
+          Sinal vermelho! Ao atingir este nível de IMC, o risco de doenças associadas está entre alto e muito alto. Busque ajuda de um profissional de saúde.`
           obesidadegrave.style.backgroundColor = "#e2e1e1"
       }
   }

@@ -64,34 +64,6 @@
     color: #fff;
     padding: 0;
   }
-  .hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-  }
-  .hero-btn:hover {
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-  }
-  @media (max-width: 700px) {
-    .text-box h1 {
-      font-size: 20px;
-    }
-    .nav-links ul li a {
-      font-size: 10px;
-      width: 10px;
-    }
-    nav img {
-      width: 50px;
-    }
-  }
   
   /* --importância de exercícios físicos-- */
   
@@ -125,13 +97,13 @@
       margin: 5px 0 10px 0;
   }
   .box {   
-      width: 19.5%;
+      width: 16.3%;
       text-align: center;
       margin-top: 3px;
       background-color: #e2e1e1;
   }
   .box1 {
-    width: 19.5%;
+    width: 16.3%;
     text-align: center;
     margin-top: 3px;
     background-color: #2e2e2e;
@@ -143,19 +115,18 @@
   }
   /*---------IMC---------- */
   .calculoIMC {
-      /* border: 3px solid red; */
       display: flex;
-      align-items: center;
       background-color: #e2e1e1;
       margin-bottom: 80px;
   }
   .IMC-col1 {
       /* border:3px solid blue; */
-      width: 90%;
+      width: 85%;
       padding: 20px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      height: auto;
+      /* justify-content: center; */
   }
   .IMC-col2 {
       background-color: #2e2e2e;
@@ -187,25 +158,40 @@
     color: #fff;
     cursor: pointer;
   }
+  .row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
   /* --------------------- */
   @media (max-width: 700px) {
-    .row {
-      flex-direction: column;
+    .nav-links ul li a {
+      font-size: 10px;
+      width: 10px;
+    }
+    nav img {
+      width: 50px;
+    }
+    .nav-links ul li a {
+      font-size: 10px;
+      width: 10px;
+    }
+    .text-box h1 {
+      font-size: 20px;
     }
     .boxtext{
       padding: 0;
     }
-    .conatiner-exerc {
+    .IMC-tabela {
       display: flex;
       flex-wrap: wrap;
       flex-direction: column;
-      align-items: center;
     }
-    .img-exerc {
-      width: 100%;
-    }
-    .box-exercise {
+    .box, .box1 {
       width: auto;
+    }
+    .calculoIMC {
+      flex-direction: column-reverse;
     }
   }
 

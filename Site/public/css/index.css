@@ -80,18 +80,6 @@
     background: #f44336;
     transition: 1s;
   }
-  @media (max-width: 700px) {
-    .text-box h1 {
-      font-size: 20px;
-    }
-    .nav-links ul li a {
-      font-size: 10px;
-      width: 10px;
-    }
-    nav img {
-      width: 50px;
-    }
-  }
   
   /* --importância de exercícios físicos-- */
   
@@ -120,11 +108,6 @@
     line-height: 22px;
     padding: 10px;
   }
-  .row {
-    margin-top: 5%;
-    display: flex;
-    justify-content: space-between;
-  }
   .sobrenos-col {
     flex-basis: 31%;
     background: #fff3f3;
@@ -141,74 +124,61 @@
   .sobrenos-col:hover {
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
   }
-  @media (max-width: 700px) {
-    .row {
-      flex-direction: column;
-    }
-  }
   .importanciaexercicios .img-1 {
     width: 100%;
   }
   .img-exerc {
     width: 50%;
-    /* max-width: 500px; */
     position: relative;
-    /* z-index: 2; */
-    /* transition: transform 0.5s; */
   }
-  /* .img-exerc:hover {
-    transform: translate(40px, 40px);
-    cursor: pointer;
-  } */
   .conatiner-exerc {
     text-align: left;
-    position: relative;
-    margin: 40px 0 150px 0;
-    /* border: 3px solid red; */
+    margin: 0 0 100px 0;
     display: flex;
     justify-content: center;
-    height: 28rem;
   }
   
   .box-exercise {
     background-color: #2e2e2e;
-    /* border: 3px solid red; */
-    /* display: flex; */
-    /* justify-content: flex-end; */
     padding: 20px;
-    /* position: absolute; */
     width: 30%;
-    /* max-width: 730px; */
-    /* top: 40px; */
-    /* left: 40px; */
   }
-  /* .box-exerc-text { */
-    /* border: 3px solid green; */
-    /* width: 100%; */
-    /* text-align: left; */
-    /* padding: 40px; */
-  /* } */
   .box-exerc-text h2 {
     color: #fbfbfb;
     font-size: 25px;
   }
   .box-exerc-text p {
     color: #bbbbbb;
-    /* padding: 30px 0 28px 0; */
+  }
+  .row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 700px){
+    .conatiner-exerc {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+    .img-exerc {
+      width: 100%;
+    }
+    .box-exercise {
+      width: auto;
+    }
+    .text-box h1 {
+      font-size: 20px;
+    }
+    .nav-links ul li a {
+      font-size: 10px;
+      width: 10px;
+    }
+    nav img {
+      width: 50px;
+    }
   }
   
-  /* @media (max-width: 1000px){ */
-    /* .img-exerc { */
-      /* width: 52%; */
-      /* max-width: 500px; */
-      /* position: relative; */
-      /* z-index: 2; */
-      /* transition: transform 0.5s; */
-    /* } */
-    /* .box-exercise{ */
-      /* width: 80%; */
-      /* display: none; */
-    /* } */
-  /* } */
-
   

@@ -65,47 +65,7 @@
     color: #fff;
     padding: 0;
   }
-  .hero-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    padding: 12px 34px;
-    font-size: 13px;
-    background: transparent;
-    position: relative;
-    cursor: pointer;
-  }
-  .hero-btn:hover {
-    border: 1px solid #f44336;
-    background: #f44336;
-    transition: 1s;
-  }
-  @media (max-width: 700px) {
-    .text-box h1 {
-      font-size: 20px;
-    }
-    .nav-links ul li a {
-      font-size: 10px;
-      width: 10px;
-    }
-    nav img {
-      width: 50px;
-    }
-  }
-  
-  /* --importância de exercícios físicos-- */
-  
-  .importanciaexercicios {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-  }
-  
-  /* ------sobre nós-------- */
-  
-  .sobrenos {
+  .exercisecard {
     width: 80%;
     margin: auto;
     text-align: center;
@@ -116,33 +76,44 @@
     font-weight: 600;
     text-align: start;
   }
-  .sobrenos h2{
+  .exercisecard h2{
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 600;
     text-align: start;
     margin-top: 3%;
   }
-  p {
-    color: #777;
+  .exerciseText p {
     font-size: 14px;
-    line-height: 22px;
-    padding: 10px;
+    text-align: initial;
+    margin-top: 3px;
   }
-  .row {
+  .exercise {
     margin-top: 2%;
     display: flex;
     justify-content: space-between;
   }
+  .exerciseText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 25px;
+  }
+  .exerciseText label {
+    color: #777;
+    font-size: 14px;
+    line-height: 35px;
+    margin-left: 3%;
+  }
   .sobrenos-col {
     flex-basis: 24%;
-    background: #fff3f3;
-    /* border-radius: 10px; */
+    background: #e2e1e1;
     margin-bottom: 5%;
-    /* padding: 12px 12px; */
     box-sizing: border-box;
+    border: 3px solid #fff;
+    transition: 1s;
   }
   .sobrenos-col img{
-      width: 100%;
+    width: 100%;
   }
   h3 {
     text-align: center;
@@ -150,32 +121,19 @@
     margin: 10px 0;
   }
   .sobrenos-col:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
-  }
-  @media (max-width: 700px) {
-    .row {
-      flex-direction: column;
-    }
+    border: 3px solid #f44336;
   }
   .importanciaexercicios .img-1 {
     width: 100%;
   }
   .img-exerc {
     width: 50%;
-    /* max-width: 500px; */
     position: relative;
-    /* z-index: 2; */
-    /* transition: transform 0.5s; */
   }
-  /* .img-exerc:hover {
-    transform: translate(40px, 40px);
-    cursor: pointer;
-  } */
   .conatiner-exerc {
     text-align: left;
     position: relative;
     margin: 40px 0 150px 0;
-    /* border: 3px solid red; */
     display: flex;
     justify-content: center;
     height: 28rem;
@@ -183,43 +141,49 @@
   
   .box-exercise {
     background-color: #2e2e2e;
-    /* border: 3px solid red; */
-    /* display: flex; */
-    /* justify-content: flex-end; */
     padding: 20px;
-    /* position: absolute; */
     width: 30%;
-    /* max-width: 730px; */
-    /* top: 40px; */
-    /* left: 40px; */
   }
-  /* .box-exerc-text { */
-    /* border: 3px solid green; */
-    /* width: 100%; */
-    /* text-align: left; */
-    /* padding: 40px; */
-  /* } */
   .box-exerc-text h2 {
     color: #fbfbfb;
     font-size: 25px;
   }
   .box-exerc-text p {
     color: #bbbbbb;
-    /* padding: 30px 0 28px 0; */
   }
+  .img1 {
+    display: flex;
+    align-items: flex-start;
+  }
+  .img2 {
+    display: flex;
+    align-items: center;
+  }
+  hr{
+    width: 100%;
+    height: 1px;
+    background-color: #8d8d8dc2;
+    border: none;
+    margin: 20px 0 20px 0;
+}
+  @media (max-width: 700px) {
+    .exercise {
+      flex-direction: column;
+    }
+    .row {
+      flex-direction: column;
+    }
+    .text-box h1 {
+      font-size: 20px;
+    }
+    .nav-links ul li a {
+      font-size: 10px;
+        width: 10px;
+      }
+      nav img {
+        width: 50px;
+      }
+    }
   
-  /* @media (max-width: 1000px){ */
-    /* .img-exerc { */
-      /* width: 52%; */
-      /* max-width: 500px; */
-      /* position: relative; */
-      /* z-index: 2; */
-      /* transition: transform 0.5s; */
-    /* } */
-    /* .box-exercise{ */
-      /* width: 80%; */
-      /* display: none; */
-    /* } */
-  /* } */
-
+  
   
