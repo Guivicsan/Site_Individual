@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/exercicios.css">
+    <script src="../js/funcoes.js"></script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+      <!-- scripts do Chart.js -->
+      <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+
+</head>
+<body>
+<!-- onload="validarSessao(), atualizarFeed()" -->
+    <section class="exercicio">
+            <div class="barra-lateral">
+                <div class="logo">
+                    <img src="../assets/imgs/Logo.png">
+                </div>
+                <div class="container-lateral">
+               <a href="relatorio.html">
+                   <img src="../assets/imgs/procurar.png"><p>Relatório</p>
+                </a>
+               <a href="dashboard-2.html">
+                   <img src="../assets/imgs/graph.png"><p>Dashboard</p>
+                </a>
+               <a href="exercicios.html">
+                   <img src="../assets/imgs/excercise.png"><p>Exercícios</p>
+                </a>
+               <a href="refeicao.html">
+                   <img src="../assets/imgs/dish.png"><p>Refeições</p>
+                </a>
+               <!-- <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button> -->
+            </div>
+            <div class="sair" onclick="limparSessao()"><img src="../assets/imgs/log-out.png"><p>Sair</p></div>
+            </div>
+            <div class="box-exerc">
+                <div class="navbar-dash">
+                    <h1>Exercícios</h1>
+                   <img src="../assets/imgs/user.png" alt="">
+                </div>
+                    <section class="exercisecard">
+                        <h2>Inciante</h2>
+                        <div class="exercise">
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>ABDÔMEN</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                          </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>PEITO</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>BRAÇO</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>PERNA</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>COSTAS E OMBROS</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr>
+                  
+                        <h2>Intermediário</h2>
+                  
+                        <div class="exercise">
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>ABDÔMEN</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>PEITO</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>BRAÇO</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>PERNA</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>COSTAS E OMBROS</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <hr>
+                  
+                        <h2>Avançado</h2>
+                  
+                        <div class="exercise">
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>ABDÔMEN</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>PEITO</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>BRAÇO</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>PERNA</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="sobrenos-col">
+                            <img src="../assets/imgs/exercise.png" alt="">
+                            <div class="exerciseText">
+                              <p>COSTAS E OMBROS</p>
+                              <div class="img1">
+                              <img style="width: 15%;" src="../assets/imgs/icon-objetivo.png"><label> Área de foco</label>
+                              </div>
+                              <p>18 MIN</p>
+                              <div class="img2">
+                              <img style="width: 15%;" src="../assets/imgs/icon-hora.png">
+                              <label> Hora</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>       
+            </div>
+    </section>
+</body>
+</html>
+
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>

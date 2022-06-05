@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+background-color: #d4d2d2;
+}
+.barra-lateral {
+  height: 100vh;
+  width: 15%;
+  top: 0;
+  left: 0;
+  background-color: #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+}
+.logo {
+  text-align: center;
+  padding: 15px;
+  background-color: #1f1f1f;
+  width: -webkit-fill-available;
+}
+.logo img {
+    width: 80px;
+}
+.container-lateral {
+  height: 75%;
+}
+.container-lateral a{
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  color: #fff;
+  opacity: 85%;
+  border: none;
+  margin-top: 40px;
+  cursor: pointer;
+}
+.container-lateral a p {
+  padding-left: 5%;
+  transition: 1s;
+}
+.container-lateral a p:hover{
+  color: #f44336;
+}
+.sair {
+  display: flex;
+  color: #fff;
+  opacity: 85%;
+  cursor: pointer;
+}
+.sair p {
+  padding-left: 5%;
+  transition: 1s;
+}
+.sair p:hover {
+  color: #f44336;
+}
+.box-exerc {
+  position: absolute;
+  width: calc(100% - 15%);
+  left: 15%;
+  background-image: url(../assets/imgs/stacked-waves-haikei.png);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.navbar-dash {
+  background-color: #fff;
+  padding: 10px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%)
+}
+.cards {
+  margin: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-cards  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+.card-box {
+  /* height: 180px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fff;
+  padding: 30px 12px;
+  border-radius: 20px;
+  margin: 20px 0 0 0;
+  box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
+  box-sizing: border-box;
+  flex-basis: 32%;
+}
+.card-result {
+  text-align: center;
+}
+.card-result span{
+  text-align: center;
+  color: #f44336;
+}
+.img-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chart-container{
+    width:45vw;
+    /* text-align: center; */
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 20px 12px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    flex-basis: 66%;
+    box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
+    position: relative; 
+}
+.imagem {
+  height: 402px;
+  background-image: url(../assets/imgs/Noelito\ Flow.png);
+  background-position: center;
+  background-size: cover;
+  margin-top: 20px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  flex-basis: 32%;
+  box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
+}
+@media (max-width: 700px) {
+  .container-cards {
+    flex-direction: column;
+  }
+.logo img{
+  width: 40px;
+  }
+.container-lateral img {
+  width: 10px;
+}
+.container-lateral a p {
+  font-size: 7px;    
+}
+.sair img {
+  width: 10px;
+}
+.sair p {
+  font-size: 7px;
+}
+.chart-container {
+  width: 68vw;
+}
+.imagem {
+  flex-basis: auto;
+}
+.card-result {
+  text-align: center;
+}
+}

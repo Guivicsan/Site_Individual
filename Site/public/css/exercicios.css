@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+  background-color: #d4d2d2;
+  }
+  .barra-lateral {
+    height: 100vh;
+    width: 15%;
+    top: 0;
+    left: 0;
+    background-color: #2e2e2e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+  }
+  .logo {
+    text-align: center;
+    padding: 15px;
+    background-color: #1f1f1f;
+    width: -webkit-fill-available;
+  }
+  .logo img {
+      width: 80px;
+  }
+  .container-lateral {
+    height: 75%;
+  }
+  .container-lateral a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    opacity: 85%;
+    border: none;
+    margin-top: 40px;
+    cursor: pointer;
+  }
+  .container-lateral a p {
+    padding-left: 5%;
+    transition: 1s;
+  }
+  .container-lateral a p:hover{
+    color: #f44336;
+  }
+  .sair {
+    display: flex;
+    color: #fff;
+    opacity: 85%;
+    cursor: pointer;
+  }
+  .sair p {
+    padding-left: 5%;
+    transition: 1s;
+  }
+  .sair p:hover {
+    color: #f44336;
+  }
+  .box-exerc {
+    position: absolute;
+    width: calc(100% - 15%);
+    left: 15%;
+    background-image: url(../assets/imgs/stacked-waves-haikei.png);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+  }
+  .navbar-dash {
+    background-color: #fff;
+    padding: 10px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%)
+  }
+  .container-cards  {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 90%;
+  }
+  .card-box {
+    width: 29.5%;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 20px 0 0 0;
+    box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
+  }
+  .card-result {
+    text-align: center;
+  }
+  .card-result span{
+    text-align: center;
+    color: #f44336;
+  }
+  .img-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .tabela{
+      /* border: 3px solid red; */
+      width: 75%;
+      height: 24rem;
+      text-align: center;
+      border-radius: 20px;
+      background-color: #fff;
+      padding: 15px;
+      margin-top: 20px;
+  }
+  .imagem img {
+      height: 26rem;
+      margin-top: 20px;
+      border-radius: 20px;
+  }
+  .exercisecard {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0 50px 0;
+  }
+  .exercisecard h2{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: start;
+    margin-top: 3%;
+  }
+  .exerciseText p {
+    color: #fff;
+    font-size: 14px;
+    text-align: initial;
+    margin-top: 3px;
+  }
+  .exercise {
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .exerciseText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 25px;
+  }
+  .exerciseText label {
+    color: #f44336;
+    font-size: 14px;
+    line-height: 35px;
+    margin-left: 3%;
+  }
+  .sobrenos-col {
+    flex-basis: 24%;
+    background: #2e2e2e;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    border: 3px solid #d4d2d4;
+    transition: 1s;
+  }
+  .sobrenos-col img{
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  .sobrenos-col:hover {
+    border: 3px solid #f44336;
+  }
+  .importanciaexercicios .img-1 {
+    width: 100%;
+  }
+  .img-exerc {
+    width: 50%;
+    position: relative;
+  }
+  .conatiner-exerc {
+    text-align: left;
+    position: relative;
+    margin: 40px 0 150px 0;
+    display: flex;
+    justify-content: center;
+    height: 28rem;
+  }
+  
+  .box-exercise {
+    background-color: #2e2e2e;
+    padding: 20px;
+    width: 30%;
+  }
+  .box-exerc-text h2 {
+    color: #fbfbfb;
+    font-size: 25px;
+  }
+  .box-exerc-text p {
+    color: #bbbbbb;
+  }
+  .img1 {
+    display: flex;
+    align-items: flex-start;
+  }
+  .img2 {
+    display: flex;
+    align-items: center;
+  }
+  hr{
+    width: 100%;
+    height: 1px;
+    background-color: #8d8d8dc2;
+    border: none;
+    margin: 20px 0 20px 0;
+}
+  @media (max-width: 700px) {
+    .exercise {
+      flex-direction: column;
+    }
+    .logo img{
+      width: 40px;
+      }
+    .container-lateral img {
+      width: 10px;
+    }
+    .container-lateral a p {
+      font-size: 7px;    
+    }
+    .sair img {
+      width: 10px;
+    }
+    .sair p {
+      font-size: 7px;
+    }
+    }
+
+    @media (max-width: 700px) {
+      .card-box {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .tabela {
+          width: 100%;
+          flex-wrap: wrap;
+      }
+    .card-result {
+        text-align: center;
+      }
+  }
+  
+  
+  
