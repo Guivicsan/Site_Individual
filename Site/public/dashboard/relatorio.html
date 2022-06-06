@@ -15,7 +15,7 @@
       <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 
 </head>
-<body onload="listar_exercios()">
+<body onload="listar_exercios(), qtdExercicio()">
 <!-- onload="validarSessao(), atualizarFeed()" -->
     <section class="exercicio">
             <div class="barra-lateral">
@@ -55,9 +55,9 @@
                         <br>
                         <h3>Exercícios</h3>
                     </div>
-                        <div class="card-result">
-                            <h2>Total</h2>
-                            <span>1000</span>
+                        <div id="exercicios_qtd" class="card-result">
+                            <!-- <h2>Total</h2>
+                            <span>1000</span> -->
                         </div>
                     </div>
                     <div class="card-box">
@@ -87,7 +87,7 @@
                                    <td>Data</td>
                                 </tr>
                              </table>               
-                             <table id="tabela">
+                             <table id="tabela_exerc">
                                 <!-- <tr>
                                     <td>abdomen</td>
                                     <td>iniciante</td>

@@ -53,10 +53,46 @@ function cadastrar_exercicio(idUsuarioLogado){
     return database.executar(instrucao);
 }
 
+function qtdExerc(id_usuario) {  
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
+    var instrucao = `
+    select count(idExercicio) as 'qtdexerc' from exercicios where fkUsuario = ${id_usuario};`;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function diaExerc_semana(id_usuario) {
+    console.log("ACESSEI O AVISO  MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar_all_pokemon_user()");
+    var instrucao = `
+    SELECT COUNT(*) AS 'qtdExercDia' , date_format(horaExerc, '%w') AS 'diaSemana'
+        FROM exercicios WHERE WEEK(horaExerc) = week(current_timestamp()) 
+			AND fkUsuario = ${id_usuario}
+                group BY day(horaExerc);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function qtdExerc_diario(id_usuario) {
+    console.log("ACESSEI O AVISO  MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar_all_pokemon_user()");
+    var instrucao = `
+    SELECT COUNT(*) AS 'qtdExercDia' , date_format(horaExerc, '%w') AS 'diaSemana'
+    FROM exercicios WHERE WEEK(horaExerc) = week(current_timestamp()) 
+        AND fkUsuario = ${id_usuario} and date_format(horaExerc, '%w')
+            group BY day(horaExerc);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
     listar_all_exercicios,
-    cadastrar_exercicio
+    cadastrar_exercicio,
+    qtdExerc,
+    diaExerc_semana,
+    qtdExerc_diario
 };

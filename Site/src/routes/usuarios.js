@@ -15,6 +15,18 @@ router.get("/listar_all_exercicios/:id_usuario", function (req, res) {
     usuarioController.listar_all_exercicios(req, res);
 });
 
+router.get("/qtdExerc/:id_usuario", function (req, res) {
+    usuarioController.qtdExerc(req, res);
+});
+
+router.get("/diaExerc_semana/:id_usuario", function (req, res) {
+    usuarioController.diaExerc_semana(req, res);
+});
+
+router.get("/qtdExerc_diario/:id_usuario", function (req, res) {
+    usuarioController.qtdExerc_diario(req, res);
+});
+
 //Recebendo os dados do html e direcionando para a função cadastrar de usuarioController.js
 router.post("/cadastrar", function (req, res) {
     usuarioController.cadastrar(req, res);

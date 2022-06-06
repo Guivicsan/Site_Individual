@@ -138,11 +138,59 @@ function listar_all_exercicios(req, res) {
     });
 }
 
+function qtdExerc(req, res) {
+    var id_usuario = req.params.id_usuario;
+    usuarioModel.qtdExerc(id_usuario).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os avisos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function diaExerc_semana(req, res) {
+    var id_usuario = req.params.id_usuario;
+    usuarioModel.diaExerc_semana(id_usuario).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os avisos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
+function qtdExerc_diario(req, res) {
+    var id_usuario = req.params.id_usuario;
+    usuarioModel.qtdExerc_diario(id_usuario).then(function (resultado) {
+        if (resultado.length > 0) {
+            res.status(200).json(resultado);
+        } else {
+            res.status(204).send("Nenhum resultado encontrado!")
+        }
+    }).catch(function (erro) {
+        console.log(erro);
+        console.log("Houve um erro ao buscar os avisos: ", erro.sqlMessage);
+        res.status(500).json(erro.sqlMessage);
+    });
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
     testar,
     listar_all_exercicios,
-    cadastrar_exercicio
+    cadastrar_exercicio,
+    qtdExerc,
+    diaExerc_semana,
+    qtdExerc_diario
 }

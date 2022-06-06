@@ -16,7 +16,7 @@ function listar_exercios() {
                         var query = resposta[i];
 
                         // trazer id da tabela html
-                        tabela.innerHTML += `
+                        tabela_exerc.innerHTML += `
                   <tr>
                     <td>${query.nomeExerc}</td>
                     <td>${query.dificuldade}</td>
@@ -64,4 +64,153 @@ function cadastrar_exercicio() {
         });
 
     return false;
+}
+
+function qtdExercicio() {
+    fetch(`/usuarios/qtdExerc/${id_usuario}`)
+        .then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    //   alert('ERRO ULTIMO CAPTURADO!');
+                }
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    for (let i = 0; i < resposta.length; i++) {
+                        var query = resposta[i];
+
+                        // trazer id da tabela html
+                        exercicios_qtd.innerHTML = `
+                        <h2>Total</h2>
+                        <span>${query.qtdexerc}</span>
+                  `
+
+
+                    }
+                });
+            } else {
+                throw "Houve um erro na função ultimo_pokemon_capturado, linha 181!";
+            }
+        })
+        .catch(function (resposta) {
+            console.error(resposta);
+            //finalizarAguardar();
+        });
+}
+
+function diaExercicio_semana() {
+    fetch(`/usuarios/diaExerc_semana/${id_usuario}`)
+        .then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    //   alert('ERRO ULTIMO CAPTURADO!');
+                }
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    for (let i = 0; i < resposta.length; i++) {
+                        var query = resposta[i];
+
+                        // trazer id da tabela html
+                        var dia_da_semana = query.diaSemana;
+                        var qtd_Exerc_semana = query.qtdExercDia;
+
+                        if (dia_da_semana == 0) {
+                            sessionStorage.setItem(
+                                "domingo",
+                               qtd_Exerc_semana 
+                            );
+                        } else if (dia_da_semana == 1) {
+                            sessionStorage.setItem(
+                                "segunda",
+                               qtd_Exerc_semana 
+                            );
+                        } else if (dia_da_semana == 2) {
+                            sessionStorage.setItem(
+                                "terça",
+                               qtd_Exerc_semana 
+                            );
+                        } else if (dia_da_semana == 3) {
+                            sessionStorage.setItem(
+                                "quarta",
+                               qtd_Exerc_semana 
+                            );
+                        } else if (dia_da_semana == 4) {
+                            sessionStorage.setItem(
+                                "quinta",
+                               qtd_Exerc_semana 
+                            );
+                        } else if (dia_da_semana == 5) {
+                            sessionStorage.setItem(
+                                "sexta",
+                               qtd_Exerc_semana 
+                            );
+                        } else if (dia_da_semana == 6) {
+                            sessionStorage.setItem(
+                                "sabado",
+                               qtd_Exerc_semana 
+                            );
+
+                            }
+                        }
+                    });
+            } else {
+                throw "Houve um erro na função ultimo_pokemon_capturado, linha 181!";
+            }
+        })
+        .catch(function (resposta) {
+            console.error(resposta);
+            //finalizarAguardar();
+        });
+}
+
+function qtdExercicio_diario() {
+    fetch(`/usuarios/qtdExerc_diario/${id_usuario}`)
+        .then(function (resposta) {
+            if (resposta.ok) {
+                if (resposta.status == 204) {
+                    //   alert('ERRO ULTIMO CAPTURADO!');
+                }
+                resposta.json().then(function (resposta) {
+                    console.log("Dados recebidos: ", JSON.stringify(resposta));
+
+                    for (let i = 0; i < resposta.length; i++) {
+                        var query = resposta[i];
+
+                        // trazer id da tabela html
+                        var totaldiario = query.diaSemana;
+                        var qtd_Exerc_diario = query.qtdExercDia;
+
+                        if (totaldiario == 0) {
+                            span_totalDiario.innerHTML = qtd_Exerc_diario    
+                                                   
+                        } else if (totaldiario == 1) {
+                            span_totalDiario.innerHTML = qtd_Exerc_diario    
+        
+                        } else if (totaldiario == 2) {
+                            span_totalDiario.innerHTML = qtd_Exerc_diario    
+                            
+                        } else if (totaldiario == 3) {
+                            span_totalDiario.innerHTML = qtd_Exerc_diario    
+                            
+                        } else if (totaldiario == 4) {
+                            span_totalDiario.innerHTML = qtd_Exerc_diario    
+                            
+                        } else if (totaldiario == 5) {
+                            span_totalDiario.innerHTML = qtd_Exerc_diario    
+                            
+                        } else if (totaldiario == 6) {
+                            span_totalDiario.innerHTML = qtd_Exerc_diario    
+
+                            }
+                        }
+                    });
+            } else {
+                throw "Houve um erro na função ultimo_pokemon_capturado, linha 181!";
+            }
+        })
+        .catch(function (resposta) {
+            console.error(resposta);
+            //finalizarAguardar();
+        });
 }

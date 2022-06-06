@@ -117,6 +117,7 @@
     align-items: center;
   }
   .tabela{
+    height: 430px;
       text-align: center;
       border-radius: 20px;
       background-color: #fff;
@@ -125,6 +126,7 @@
       box-sizing: border-box;
       flex-basis: 76.5%;
       box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
+      overflow: auto;
   }
   .imagem {
     height: 430px;
