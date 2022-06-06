@@ -81,61 +81,99 @@
     width: 85%;
   }
   .cards {
-    margin: 15px;
+    margin: 0px 50px 0px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .container-cards  {
+      width: 100%;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      width: 90%;
+      padding: 35px 0 0 0;
+    }
+    .video{
+        height: 600px;
+        text-align: center;
+        background-color: #fff;
+        box-sizing: border-box;
+        flex-basis: 76.5%;
+        box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
+        background-image: url(../assets/imgs/Vegetable\ Omelette.jpg);
+        background-position: center;
+        background-size: cover;
+    }
+    .detalhes-treino {
+        background-color: #2e2e2e;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        flex-basis: 50%;
+        box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
   }
-  .card-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: #fff;
-    padding: 20px 12px;
-    border-radius: 20px;
-    margin: 20px 0 0 0;
-    box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
-    box-sizing: border-box;
-    flex-basis: 32%;
+  .detalhes-treino ul {
+      list-style: none;
   }
-  .card-result {
-    text-align: center;
+  .detalhes-treino ul li {
+      color: #b1b1b1;
+      font-size: 14px;
   }
-  .card-result span{
-    text-align: center;
-    color: #f44336;
+  .detalhes-treino ul li span {
+      color: #fff;
+      font-size: 14px;
   }
-  .img-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .tabela{
+  .text {
+     padding: 20px; 
+ }
+ .text h4 {
+     margin-bottom: 20px;
+ }
+ .text hr {
+     background-color: #b1b1b1;
+     height: 1px;
+     border: none;
+     margin: 20px 0 20px 0;
+ }
+ .text p {
+     color: #b1b1b1;
+     font-size: 14px;
+ }
+  .container-btn {
+      border-top: 1px solid #b1b1b1;
       text-align: center;
-      border-radius: 20px;
-      background-color: #fff;
-      padding: 20px 12px;
-      margin-top: 20px;
-      box-sizing: border-box;
-      flex-basis: 76.5%;
-      box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
   }
-  .imagem {
-    height: 430px;
-    background-image: url(../assets/imgs/Never\ Stop\ IPhone\ Wallpaper\ -\ IPhone\ Wallpapers.jpg);
-    background-position: center;
-    background-size: cover;
+  .container-btn button {
+      background-color: #2e2e2e;
+      border: 1px solid #b1b1b1;
+      color: #b1b1b1;
+      font-size: 16px;
+      border-top: none;
+      border-bottom: none;
+      padding: 30px 10px 30px 10px;
+      transition: 1s;
+  }
+  .container-btn button:hover {
+      color: #f44336;
+  }
+  .informações {
+      width: 100%;
+      padding: 0 0 60px 0;
+  }
+  .container-info {
+      background-color: #fff;
+      list-style-position: inside;
+      padding: 10px 30px 30px 30px;
+  }
+  .container-info h1 {
+    font-size: xx-large;
+    font-weight: 400;
     margin-top: 20px;
-    border-radius: 20px;
-    box-sizing: border-box;
-    flex-basis: 21.5%;
-    box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
+  }
+  .container-info h3 {
+      font-size: 21px;
+      font-weight: 500;
+    margin: 10px 0 10px 0;
   }
   @media (max-width: 700px) {
     .container-cards {
@@ -156,10 +194,10 @@
     .sair p {
       font-size: 7px;
     }
-    .imagem {
+    .video {
+    flex-basis: auto;
+    }
+    .detalhes-treino {
       flex-basis: auto;
     }
-    .card-result {
-        text-align: center;
-      }
   }

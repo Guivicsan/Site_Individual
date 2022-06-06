@@ -77,6 +77,9 @@ background-color: #d4d2d2;
   align-items: center;
   box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%)
 }
+.navbar-text {
+  width: 85%;
+}
 .cards {
   margin: 15px;
   display: flex;
@@ -160,6 +163,7 @@ background-color: #d4d2d2;
   width: 68vw;
 }
 .imagem {
+  height: 470px;
   flex-basis: auto;
 }
 .card-result {
