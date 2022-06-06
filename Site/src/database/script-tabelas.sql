@@ -33,7 +33,51 @@ create table exercicios (
 ); 
 
 
+-- ------------------------------------------------------------------------
 
+
+
+create database fitness;
+
+use fitness;
+
+CREATE TABLE usuario (
+	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
+	nome VARCHAR(50),
+	email VARCHAR(50),
+	senha VARCHAR(50)
+);
+
+create table refeicao (
+	idReficao int primary key auto_increment,
+    nomeRef varchar (50),
+    fkUsuario int,
+    foreign key (fkUsuario) references usuario (idUsuario)
+);
+
+create table exercicios (
+	idExercicio int primary key auto_increment,
+    nomeExerc varchar (50),
+    dificuldade char (13), constraint chekdif check (dificuldade = 'iniciante' or dificuldade = 'intermediario' or dificuldade = 'avancado'),
+    horaExerc datetime,
+    fkUsuario int,
+    foreign key (fkUsuario) references usuario (idUsuario)
+); 
+
+insert into exercicios (nomeExerc, dificuldade, horaExerc, fkUsuario) values
+	('abdomen', 'iniciante', '2022-06-05 15:00:00', 2);
+
+select * from usuario;
+select * from exercicios;
+select nomeExerc, dificuldade, horaExerc from exercicios where fkUsuario = 1;
+select count(idExercicio) as 'qtdexerc' from exercicios where fkUsuario = 2; 
+
+    SELECT COUNT(*) AS 'qtdExercDia' , date_format(horaExerc, '%w') AS 'diaSemana'
+        FROM exercicios WHERE WEEK(horaExerc) = week(current_timestamp()) 
+			AND fkUsuario = 2 and date_format(horaExerc, '%w')
+                group BY day(horaExerc);
+
+select nomeExerc, dificuldade, horaExerc from exercicios where fkUsuario = 1 GROUP BY nomeExerc;
 
 
 
