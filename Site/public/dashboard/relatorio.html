@@ -15,7 +15,7 @@
       <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 
 </head>
-<body>
+<body onload="listar_exercios()">
 <!-- onload="validarSessao(), atualizarFeed()" -->
     <section class="exercicio">
             <div class="barra-lateral">
@@ -78,7 +78,23 @@
                         </div>
                     </div>
                     <div class="tabela">
-                        <div class="container-tab"><h3>tabela</h3></div>
+                        <h3>tabela</h3>
+                        <div>
+                            <table class="tabela_relatorio">
+                                <tr>
+                                   <td>Exercício</td>
+                                   <td>Dificuldade</td>
+                                   <td>Data</td>
+                                </tr>
+                             </table>               
+                             <table id="tabela">
+                                <!-- <tr>
+                                    <td>abdomen</td>
+                                    <td>iniciante</td>
+                                    <td>2022-22-05 15:00:00</td>
+                                 </tr>                     -->
+                             </table>
+                        </div>
                     </div>
                     <div class="imagem"></div>
                 </div>
@@ -87,7 +103,7 @@
     </section>
 </body>
 </html>
-
+<script src="../js/exercicios.js"></script>
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 </script>

@@ -15,8 +15,8 @@
       <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 
 </head>
-<body>
-<!-- onload="validarSessao(), atualizarFeed()" -->
+<body
+onload="listar_exercios()">
     <section class="exercicio">
             <div class="barra-lateral">
                 <div class="logo">
@@ -48,7 +48,7 @@
                 </div>
                     <section class="exercisecard">
                         <h2>Inciante</h2>
-                        <div class="exercise">
+                        <div class="exercise" id="all_cards">
                           <div class="sobrenos-col">
                             <a href="video.html">
                             <img src="../assets/imgs/Ab-1.jpg" alt="">
@@ -279,7 +279,15 @@
     </section>
 </body>
 </html>
-
+<script src="../js/exercicios.js">
+  
+</script>
 <script>
     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+    var id_card = 0
+    function iniciante_abs() {
+      id_card = iniciante_abdomen.value
+      window.location.href = "video.html"
+    }
 </script>

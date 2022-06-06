@@ -31,8 +31,32 @@ function cadastrar(nome, email, senha) {
     return database.executar(instrucao);
 }
 
+function listar_all_exercicios(id_usuario) {  
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function listar()");
+    var instrucao = `
+    select nomeExerc, dificuldade, DATE_FORMAT(horaExerc, '%d/%m/%Y %Hh%i') as 'horaExerc' from exercicios where fkUsuario = ${id_usuario};`;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function cadastrar_exercicio(idUsuarioLogado){
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function capturado_sucesso():", idUsuarioLogado);
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+    insert into exercicios (nomeExerc, dificuldade, horaExerc, fkUsuario) values
+        ('abdomen', 'iniciante', now(), ${idUsuarioLogado});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    listar_all_exercicios,
+    cadastrar_exercicio
 };
