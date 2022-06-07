@@ -15,22 +15,25 @@ CREATE TABLE usuario (
 	senha VARCHAR(50)
 );
 
-create table refeicao (
+create table refeicoes (
 	idRefeicao int primary key auto_increment,
     nomeRef varchar (50),
-    fkUsuario int,
-    foreign key (fkUsuario) references usuario (idUsuario)
+    tipo char (13), constraint checktipo check (tipo = 'Café da manhã' or tipo = 'Almoço' or tipo = 'Café da tarde' or tipo = 'Janta'),
+    horaRef datetime,
+    fkUsuarioRef int,
+    foreign key (fkUsuarioRef) references usuario (idUsuario)
 );
 
 create table exercicios (
 	idExercicio int primary key auto_increment,
     nomeExerc varchar (50),
     dificuldade char (13), constraint chekdif check (dificuldade = 'iniciante' or dificuldade = 'intermediario' or dificuldade = 'avancado'),
-    tipo varchar (50),
     horaExerc datetime,
-    fkUsuario int,
-    foreign key (fkUsuario) references usuario (idUsuario)
-); 
+    fkUsuarioExerc int,
+    foreign key (fkUsuarioExerc) references usuario (idUsuario)
+);
+
+select * from Usuario;
 
 
 -- ------------------------------------------------------------------------

@@ -98,7 +98,7 @@
     justify-content: space-evenly;
     background-color: #fff;
     padding: 20px 12px;
-    border-radius: 20px;
+    border-radius: 10px;
     margin: 20px 0 0 0;
     box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
     box-sizing: border-box;
@@ -117,37 +117,49 @@
     align-items: center;
   }
   .tabela{
-      /* justify-content: center; */
-      border-radius: 20px;
-      background-color: #fff;
-      padding: 20px 12px;
       margin-top: 20px;
       box-sizing: border-box;
       flex-basis: 37.3%;
       display: flex;
-      box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
-      overflow: auto;
-  }
-  /* .tabela_relatorio td {
-    font-size: 20px;
+      flex-direction: column;
   }
   .container_relatorio {
-    border: 3px solid red;
+    width: 100%;
+    height: 430px;
+    border-radius: 10px;
+    overflow: auto;
   }
   .box-text {
-    border: 3px solid blue;
+    height: 94%;
+    background-color: #fff;
+  }
+  .tabela_relatorio {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .tabela_relatorio thead tr{
+    padding: 12px 15px;
+    width: 100%;
+    background-color: #fff;
+  }
+  .tabela_relatorio thead {
+    margin-bottom: 20px;
+  }
+  .tabela_relatorio td,th{
+    text-align: center;
+    padding: 5px;
   }
   #tabela_exerc td {
-    font-size: 14px;
-  } */
-  
+    border: 1px solid #d4d4d4;
+    background-color: #fff;
+  }
   .imagem {
     height: 430px;
     background-image: url(../assets/imgs/Never\ Stop\ IPhone\ Wallpaper\ -\ IPhone\ Wallpapers.jpg);
     background-position: center;
     background-size: cover;
     margin-top: 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     box-sizing: border-box;
     flex-basis: 21.5%;
     box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);

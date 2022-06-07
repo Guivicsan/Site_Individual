@@ -1,5 +1,7 @@
 // const Query = require("mysql2/typings/mysql/lib/protocol/sequences/Query");
 
+// window.onload = diaExercicio_semana()
+
 var id_usuario = sessionStorage.ID_USUARIO;
 
 function listar_exercicios() {

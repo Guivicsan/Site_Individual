@@ -101,12 +101,18 @@
       text-align: center;
       margin-top: 3px;
       background-color: #e2e1e1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
   }
   .box1 {
     width: 16.3%;
     text-align: center;
     margin-top: 3px;
     background-color: #2e2e2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
  }
   .box p, .box1 p{
     color: #f44336;
