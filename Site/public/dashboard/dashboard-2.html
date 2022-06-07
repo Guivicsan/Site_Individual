@@ -15,7 +15,7 @@
 
 </head>
 
-<body onload="diaExercicio_semana(), qtdExercicio_diario()">
+<body onload="diaExercicio_semana(), qtdExercicio_diario(), diaRefeicoes_semana(), qtdRefecao_diario()">
   <section class="exercicio">
     <div class="barra-lateral">
       <div class="logo">
@@ -62,7 +62,7 @@
             </div>
             <div class="card-result">
               <h2>Total diário</h2>
-              <span id="span_totalDiario">1000</span>
+              <span id="span_totalDiarioExerc">0</span>
             </div>
           </div>
           <div class="card-box">
@@ -73,8 +73,7 @@
             </div>
             <div class="card-result">
               <h2>Total diário</h2>
-              <!-- <p>Diário</p> -->
-              <span style="color: #25d398;">1000</span>
+              <span id="span_totalDiarioRef" style="color: #25d398;">0</span>
             </div>
           </div>
           <div class="card-box">
@@ -97,6 +96,7 @@
 
 </html>
 <script src="../js/exercicios.js"></script>
+<script src="../js/refeicoes.js"></script>
 <script>
   b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
@@ -108,12 +108,20 @@
   var sabado = sessionStorage.getItem('sabado')
   var domingo = sessionStorage.getItem('domingo')
 
-  const labels = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
+  var segunda_Ref = sessionStorage.getItem('segundaRef')
+  var terca_Ref = sessionStorage.getItem('terçaRef')
+  var quarta_Ref = sessionStorage.getItem('quartaRef')
+  var quinta_Ref = sessionStorage.getItem('quintaRef')
+  var sexta_Ref = sessionStorage.getItem('sextaRef')
+  var sabado_Ref = sessionStorage.getItem('sabadoRef')
+  var domingo_Ref = sessionStorage.getItem('domingoRef')
 
+  const labels = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"];
   const data = {
     labels: labels,
     datasets: [
       {
+        yAxisID: 'y-exercicios',
         label: "Exercícios",
         backgroundColor: "#f443365e",
         borderColor: "#f44336",
@@ -128,11 +136,19 @@
           domingo],
       },
       {
+        yAxisID: 'y-refeicoes',
         label: "Refeições",
         backgroundColor: "#2bb28331",
         borderColor: "#25d398",
         borderWidth: 1,
-        data: [4, 3, 6, 4, 2, 1, 6, 0],
+        data: [
+          segunda_Ref,
+          terca_Ref,
+          quarta_Ref,
+          quinta_Ref,
+          sexta_Ref,
+          sabado_Ref,
+          domingo_Ref],
       },
     ],
   };
@@ -141,19 +157,40 @@
     type: "bar",
     data: data,
     options: {
-      // plugins: {
-      //   legend: false,
-      // },
-    },
-  };
+        plugins: {
+          legend: true,
+        },
+                responsive: true,
+                title: {
+                  display: true,
+                  text: 'Quantidade de exercícios e refeições realizadas'
+                },
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        id: 'y-exercicios',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 10,
+                            min: 0
+                        }
+                    }, {
+                        type: 'linear',
+                        display: false,
+                        position: 'right',
+                        id: 'y-refeicoes',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 10,
+                            min: 0
+                        },
+                    }],
+                },
+            },
+    }
 
   const myChart = new Chart(document.getElementById("myChart"), config);
 
 </script>
-
-<!-- .x_content{
-width: 1200px;
-margin: 0 auto;
-height: 350px;
-padding: 10px;
-} -->

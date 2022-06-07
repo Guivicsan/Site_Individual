@@ -1,9 +1,8 @@
-// const Query = require("mysql2/typings/mysql/lib/protocol/sequences/Query");
 
 var id_usuario = sessionStorage.ID_USUARIO;
 
-function listar_exercicios() {
-    fetch(`/usuarios/listar_all_exercicios/${id_usuario}`)
+function listar_refeicoes() {
+    fetch(`/usuarios/lista_all_refeicoes/${id_usuario}`)
         .then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
@@ -16,17 +15,17 @@ function listar_exercicios() {
                         var query = resposta[i];
 
                         // trazer id da tabela html
-                        tabela_exerc.innerHTML += `
+                        tabela_refeicao.innerHTML += `
                   <tr>
-                    <td>${query.nomeExerc}</td>
-                    <td>${query.dificuldade}</td>
-                    <td>${query.horaExerc}</td>
+                    <td>${query.nomeRef}</td>
+                    <td>${query.tipo}</td>
+                    <td>${query.horaRef}</td>
                     </tr>
                   `
                     }
                 });
             } else {
-                throw "Houve um erro na função listar exercícios!";
+                throw "Houve um erro na função listar refeição!";
             }
         })
         .catch(function (resposta) {
@@ -35,10 +34,10 @@ function listar_exercicios() {
         });
 }
 
-function cadastrar_exercicio() {
+function cadastrar_omelete() {
     var id_usuarioVar = sessionStorage.ID_USUARIO;
 
-    fetch("/usuarios/cadastrar_exercicio", {
+    fetch("/usuarios/cadastrar_omelete", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -52,9 +51,9 @@ function cadastrar_exercicio() {
         .then(function (resposta) {
 
             if (resposta.ok) {
-                window.alert('Exercicio finalizado com sucesso');
+                window.alert('Refeicao finalizado com sucesso');
             } else {
-                window.alert("Houve um erro ao tentar finalizar o exercícios!");
+                window.alert("Houve um erro ao tentar finalizar a refeicão!");
             }
         })
         .catch(function (resposta) {
@@ -64,8 +63,8 @@ function cadastrar_exercicio() {
     return false;
 }
 
-function qtdExercicio() {
-    fetch(`/usuarios/qtdExerc/${id_usuario}`)
+function qtdRefeicoes() {
+    fetch(`/usuarios/qtdRef/${id_usuario}`)
         .then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
@@ -78,16 +77,14 @@ function qtdExercicio() {
                         var query = resposta[i];
 
                         // trazer id da tabela html
-                        exercicios_qtd.innerHTML = `
+                        refeicoes_qtd.innerHTML = `
                         <h2>Total</h2>
-                        <span>${query.qtdexerc}</span>
+                        <span style="color: #25d398;">${query.qtdref}</span>
                   `
-
-
                     }
                 });
             } else {
-                throw "Houve um erro na função ultimo_pokemon_capturado, linha 181!";
+                throw "Houve um erro na função qtdRefeicao!";
             }
         })
         .catch(function (resposta) {
@@ -96,8 +93,8 @@ function qtdExercicio() {
         });
 }
 
-function diaExercicio_semana() {
-    fetch(`/usuarios/diaExerc_semana/${id_usuario}`)
+function diaRefeicoes_semana() {
+    fetch(`/usuarios/diaRef_semana/${id_usuario}`)
         .then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
@@ -111,42 +108,42 @@ function diaExercicio_semana() {
 
                         // trazer id da tabela html
                         var dia_da_semana = query.diaSemana;
-                        var qtd_Exerc_semana = query.qtdExercDia;
+                        var qtd_Ref_semana = query.qtdRefDia;
 
                         if (dia_da_semana == 0) {
                             sessionStorage.setItem(
-                                "domingo",
-                               qtd_Exerc_semana 
+                                "domingoRef",
+                               qtd_Ref_semana 
                             );
                         } else if (dia_da_semana == 1) {
                             sessionStorage.setItem(
-                                "segunda",
-                               qtd_Exerc_semana 
+                                "segundaRef",
+                               qtd_Ref_semana 
                             );
                         } else if (dia_da_semana == 2) {
                             sessionStorage.setItem(
-                                "terça",
-                               qtd_Exerc_semana 
+                                "terçaRef",
+                               qtd_Ref_semana 
                             );
                         } else if (dia_da_semana == 3) {
                             sessionStorage.setItem(
-                                "quarta",
-                               qtd_Exerc_semana 
+                                "quartaRef",
+                               qtd_Ref_semana 
                             );
                         } else if (dia_da_semana == 4) {
                             sessionStorage.setItem(
-                                "quinta",
-                               qtd_Exerc_semana 
+                                "quintaRef",
+                               qtd_Ref_semana 
                             );
                         } else if (dia_da_semana == 5) {
                             sessionStorage.setItem(
-                                "sexta",
-                               qtd_Exerc_semana 
+                                "sextaRef",
+                               qtd_Ref_semana 
                             );
                         } else if (dia_da_semana == 6) {
                             sessionStorage.setItem(
-                                "sabado",
-                               qtd_Exerc_semana 
+                                "sabadoRef",
+                               qtd_Ref_semana 
                             );
 
                             }
@@ -162,8 +159,8 @@ function diaExercicio_semana() {
         });
 }
 
-function qtdExercicio_diario() {
-    fetch(`/usuarios/qtdExerc_diario/${id_usuario}`)
+function qtdRefecao_diario() {
+    fetch(`/usuarios/qtdRef_diario/${id_usuario}`)
         .then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
@@ -177,28 +174,28 @@ function qtdExercicio_diario() {
 
                         // trazer id da tabela html
                         var totaldiario = query.diaSemana;
-                        var qtd_Exerc_diario = query.qtdExercDia;
+                        var qtd_Ref_diario = query.qtdRefDia;
 
                         if (totaldiario == 0) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
+                            span_totalDiarioRef.innerHTML = qtd_Ref_diario    
                                                    
                         } else if (totaldiario == 1) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
+                            span_totalDiarioRef.innerHTML = qtd_Ref_diario    
         
                         } else if (totaldiario == 2) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
+                            span_totalDiarioRef.innerHTML = qtd_Ref_diario    
                             
                         } else if (totaldiario == 3) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
+                            span_totalDiarioRef.innerHTML = qtd_Ref_diario    
                             
                         } else if (totaldiario == 4) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
+                            span_totalDiarioRef.innerHTML = qtd_Ref_diario    
                             
                         } else if (totaldiario == 5) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
+                            span_totalDiarioRef.innerHTML = qtd_Ref_diario    
                             
                         } else if (totaldiario == 6) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
+                            span_totalDiarioRef.innerHTML = qtd_Ref_diario    
 
                             }
                         }

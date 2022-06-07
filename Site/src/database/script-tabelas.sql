@@ -16,7 +16,7 @@ CREATE TABLE usuario (
 );
 
 create table refeicao (
-	idReficao int primary key auto_increment,
+	idRefeicao int primary key auto_increment,
     nomeRef varchar (50),
     fkUsuario int,
     foreign key (fkUsuario) references usuario (idUsuario)
@@ -49,7 +49,7 @@ CREATE TABLE usuario (
 );
 
 create table refeicao (
-	idReficao int primary key auto_increment,
+	idRefeicao int primary key auto_increment,
     nomeRef varchar (50),
     fkUsuario int,
     foreign key (fkUsuario) references usuario (idUsuario)
