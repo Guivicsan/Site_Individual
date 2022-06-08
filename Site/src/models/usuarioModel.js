@@ -40,7 +40,33 @@ function cadastrar_exercicio(idUsuarioLogado){
     //  e na ordem de inserção dos dados.
     var instrucao = `
     insert into exercicios (nomeExerc, dificuldade, horaExerc, fkUsuarioExerc) values
-        ('abdomen', 'iniciante', now(), ${idUsuarioLogado});
+        ('Abdômen', 'Iniciante', now(), ${idUsuarioLogado});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function cadastrar_peito_inter(idUsuarioLogado){
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrado_sucesso():", idUsuarioLogado);
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+    insert into exercicios (nomeExerc, dificuldade, horaExerc, fkUsuarioExerc) values
+        ('Peito', 'Intermediário', now(), ${idUsuarioLogado});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function cadastrar_braco_ava(idUsuarioLogado){
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrado_sucesso():", idUsuarioLogado);
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+    insert into exercicios (nomeExerc, dificuldade, horaExerc, fkUsuarioExerc) values
+        ('Braço', 'Avançado', now(), ${idUsuarioLogado});
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -151,8 +177,10 @@ module.exports = {
     cadastrar,
     listar,
 //-------------exercícios-------------//
-    cadastrar_exercicio,
     listar_all_exercicios,
+    cadastrar_exercicio,
+    cadastrar_peito_inter,
+    cadastrar_braco_ava,
     qtdExerc,
     diaExerc_semana,
     qtdExerc_diario,

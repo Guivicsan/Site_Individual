@@ -62,6 +62,15 @@ router.post("/cadastrar_exercicio", function (req, res) {
     usuarioController.cadastrar_exercicio(req, res);
 });
 
+router.post("/cadastrar_peito_inter", function (req, res) {
+    usuarioController.cadastrar_peito_inter(req, res);
+});
+
+router.post("/cadastrar_braco_ava", function (req, res) {
+    usuarioController.cadastrar_braco_ava(req, res);
+});
+
+
 //-----------rota refeições post----------------//
 
 router.post("/cadastrar_omelete", function (req, res) {

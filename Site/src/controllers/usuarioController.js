@@ -124,6 +124,62 @@ function cadastrar_exercicio(req, res) {
     }
 }
 
+function cadastrar_peito_inter(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idUsuarioLogado = req.body.idUsuarioServer;
+
+    // Faça as validações dos valores
+    if (idUsuarioLogado == undefined) {
+        res.status(400).send("Seu usuario está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar_peito_inter(idUsuarioLogado)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+function cadastrar_braco_ava(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idUsuarioLogado = req.body.idUsuarioServer;
+
+    // Faça as validações dos valores
+    if (idUsuarioLogado == undefined) {
+        res.status(400).send("Seu usuario está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar_braco_ava(idUsuarioLogado)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 function listar_all_exercicios(req, res) {
     var id_usuario = req.params.id_usuario;
     usuarioModel.listar_all_exercicios(id_usuario).then(function (resultado) {
@@ -282,6 +338,8 @@ module.exports = {
 //------------- Exercícios ------------//
     listar_all_exercicios,
     cadastrar_exercicio,
+    cadastrar_peito_inter,
+    cadastrar_braco_ava,
     qtdExerc,
     diaExerc_semana,
     qtdExerc_diario,

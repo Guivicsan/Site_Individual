@@ -165,13 +165,13 @@ nav img {
     cursor: pointer;
 }
 .loading-div {
-  width: 50px;
+  width: 100px;
   margin: auto;
   display: none;
 }
 .loading-div img {
   height: 50px;
-  width: 50px;
+  width: 100px;
 }
 @media (max-width: 700px) {
   .nav-links ul li a {

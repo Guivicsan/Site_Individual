@@ -66,6 +66,65 @@ function cadastrar_exercicio() {
     return false;
 }
 
+function cadastrar_peito_inter() {
+    var id_usuarioVar = sessionStorage.ID_USUARIO;
+
+    fetch("/usuarios/cadastrar_peito_inter", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idUsuarioServer: id_usuarioVar
+        }),
+    })
+        .then(function (resposta) {
+
+            if (resposta.ok) {
+                window.alert('Exercicio finalizado com sucesso');
+            } else {
+                window.alert("Houve um erro ao tentar finalizar o exercícios!");
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+    return false;
+}
+
+function cadastrar_braco_ava() {
+    var id_usuarioVar = sessionStorage.ID_USUARIO;
+
+    fetch("/usuarios/cadastrar_braco_ava", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idUsuarioServer: id_usuarioVar
+        }),
+    })
+        .then(function (resposta) {
+
+            if (resposta.ok) {
+                window.alert('Exercicio finalizado com sucesso');
+            } else {
+                window.alert("Houve um erro ao tentar finalizar o exercícios!");
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+    return false;
+}
+
+
 function qtdExercicio() {
     fetch(`/usuarios/qtdExerc/${id_usuario}`)
         .then(function (resposta) {

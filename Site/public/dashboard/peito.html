@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/video.css">
+    <script src="../js/funcoes.js"></script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet"
+  />
+      <!-- scripts do Chart.js -->
+      <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+
+</head>
+<body>
+<!-- onload="validarSessao(), atualizarFeed()" -->
+    <section class="exercicio">
+            <div class="barra-lateral">
+                <div class="logo">
+                    <img src="../assets/imgs/Logo.png">
+                </div>
+                <div class="container-lateral">
+               <a href="relatorio.html">
+                   <img src="../assets/imgs/procurar.png"><p>Relatório</p>
+                </a>
+               <a href="dashboard-2.html">
+                   <img src="../assets/imgs/graph.png"><p>Dashboard</p>
+                </a>
+               <a href="exercicios.html">
+                   <img src="../assets/imgs/excercise.png"><p>Exercícios</p>
+                </a>
+               <a href="refeicao.html">
+                   <img src="../assets/imgs/dish.png"><p>Refeições</p>
+                </a>
+               <!-- <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button> -->
+            </div>
+            <div class="sair" onclick="limparSessao()"><img src="../assets/imgs/log-out.png"><p>Sair</p></div>
+            </div>
+            <div class="box-exerc">
+                <div class="navbar-dash">
+                    <div class="navbar-text">
+                      <h1>Peito</h1>
+                    </div>
+                    <span id="b_usuario">usuário</span><img src="../assets/imgs/user.png" alt="">
+                  </div>
+                <div class="cards">
+                    <div class="container-cards">
+                    <div style="background-image: url(../assets/imgs/como-definir-o-peito-850x514.jpg);background-position: center; background-size: cover;" class="video">
+                        <div class="container-video">
+                            
+                        </div>
+                    </div>
+                    <div class="detalhes-treino">
+                        <div class="text">
+                        <h4>DETALHES DO TREINO</h4>
+                        <ul>
+                            <li>Duração: <span>18 minutos</span></li> 
+                            <li>Queima de calorias: <span>70-100</span></li>
+                            <li>Dificuldade: <span>Intermediário</span></li>
+                        </ul>
+                        <hr>
+                        <p>Um treino de média intesidade que usa o peso do próprio corpo. Ideal pra quem busca resultados rápidos.</p>
+                        </div>
+                        <div class="btn">
+                            <div class="container-btn">
+                                <button onclick="cadastrar_peito_inter()">Finalizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>                
+            </div>
+    </section>
+</body>
+</html>
+<script src="../js/exercicios.js"></script>
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+</script>

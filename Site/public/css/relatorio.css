@@ -116,12 +116,16 @@
     flex-direction: column;
     align-items: center;
   }
-  .tabela{
+  .tabela {
       margin-top: 20px;
       box-sizing: border-box;
       flex-basis: 37.3%;
       display: flex;
       flex-direction: column;
+  }
+  .tabela h4 {
+    padding: 0 0 2px 15px;
+    color: #f44336;
   }
   .container_relatorio {
     width: 100%;
@@ -132,6 +136,7 @@
   .box-text {
     height: 94%;
     background-color: #fff;
+    box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
   }
   .tabela_relatorio {
     width: 100%;
@@ -150,6 +155,10 @@
     padding: 5px;
   }
   #tabela_exerc td {
+    border: 1px solid #d4d4d4;
+    background-color: #fff;
+  }
+  #tabela_refeicao td {
     border: 1px solid #d4d4d4;
     background-color: #fff;
   }
