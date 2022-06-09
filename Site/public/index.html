@@ -1,122 +1,130 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/index.css" />
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script src="./js/funcoes.js"></script>
-    <title>AcquaTec | Página Inicial</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <section class="header">
-      <nav>
-        <a href="index.html"><img src="./assets/imgs/Logo.png" /></a>
-        <div class="nav-links">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="./js/funcoes.js"></script>
+  <title>AcquaTec | Página Inicial</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <title>Document</title>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="./assets/imgs/Logo.png" /></a>
+      <div class="nav-links">
+        <ul>
+          <li><a href="./index.html">HOME</a></li>
+          <li><a href="./simulador.html">SIMULADOR</a></li>
+          <li><a href="./about.html">ABOUT</a></li>
+          <li><a href="./login.html">SIGN IN</a></li>
+          <li><a href="./cadastro.html">SIGN UP</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="text-box">
+      <h1>
+        Hábitos saudáveis<br />
+        para uma vida<br />
+        melhor
+      </h1>
+      <p>
+        O melhor investimento que você pode fazer na vida é<br />
+        cuidar do seu corpo e da sua saúde mental.<br />Todo o resto dependerá
+        desses dois pilares.
+      </p>
+      <a href="cadastro.html" class="hero-btn">Começe agora</a>
+    </div>
+  </section>
+
+  <!---importancia da exercícios físicos---->
+
+  <section id="exercicios" class="importanciaexercicios">
+    <div class="conatiner-exerc">
+      <img id="exercicios" src="./assets/imgs/exercise.png" class="img-exerc" />
+      <div class="box-exercise">
+        <div class="box-exerc-text">
+          <h2>Exercícios Físicos</h2>
+          <p>
+            A prática de exercícios físicos é essencial para aumentar a qualidade de vida. As atividades físicas são
+            responsáveis por garantir o bom funcionamento de todo o nosso organismo.
+
+            Muito além da questão estética, praticar exercícios físicos com regularidade traz diversos benefícios para a
+            nossa saúde física e mental.
+
+            Não só isso, mas as atividades físicas também previnem uma série de doenças crônicas, como diabetes,
+            hipertensão, diversas doenças cardíacas e até mesmo alguns tipos de câncer.
+
+            Além disso, estudos demonstram que a prática regular de exercícios físicos aumenta em até 5 anos a
+            expectativa de vida.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="alimentacao" class="conatiner-exerc">
+      <div class="box-exercise">
+        <div class="box-exerc-text">
+          <h2>Alimentação</h2>
+          <p>
+            Se alimentar de forma saudável e equilibrada é essencial para garantir qualidade de vida. Isso porque, além
+            de fornecer energia e bem-estar geral, através de uma boa alimentação é possível prevenir e combater
+            doenças, manter o peso corporal saudável e ter um bom desenvolvimento físico. Associado a exercícios físicos, boas horas de sono e hidratação adequada, a consciência sobre o que você come pode proporcionar saúde e completo bem-estar físico, mental e emocional.
+          </p>
+        </div>
+      </div>
+      <img src="./assets/imgs/food.png" class="img-exerc" />
+    </div>
+  </section>
+  <!----------footer------------->
+  <section class="footer">
+    <div class="conatiner">
+      <div class="fileira">
+        <div class="footer-col">
+          <h4>Home</h4>
+          <hr>
           <ul>
-            <li><a href="./index.html">HOME</a></li>
-            <li><a href="./simulador.html">SIMULADOR</a></li>
-            <li><a href="./about.html">ABOUT</a></li>
-            <li><a href="./login.html">SIGN IN</a></li>
-            <li><a href="./cadastro.html">SIGN UP</a></li>
+            <li><a href="#exercicios">exercícios</a></li>
+            <li><a href="#alimentacao">alimentação</a></li>
           </ul>
         </div>
-      </nav>
-
-      <div class="text-box">
-        <h1>
-          Hábitos saudáveis<br />
-          para uma vida<br />
-          melhor
-        </h1>
-        <p>
-          O melhor investimento que você pode fazer na vida é<br />
-          cuidar do seu corpo e da sua saúde mental.<br />Todo o resto dependerá
-          desses dois pilares.
-        </p>
-        <a href="cadastro.html" class="hero-btn">Começe agora</a>
-      </div>
-    </section>
-
-    <!---importancia da exercícios físicos---->
-
-    <section id="exercicios" class="importanciaexercicios">
-      <div class="conatiner-exerc">
-        <img id="exercicios" src="./assets/imgs/exercise.png" class="img-exerc" />
-        <div class="box-exercise">
-          <div class="box-exerc-text">
-            <h2>Importância dos Exercícios Físicos</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Pellentesque aliquet turpis nulla, eleifend faucibus est
-              sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus Donec
-              sit
-            </p>
+        <div class="footer-col">
+          <h4>Simulador</h4>
+          <hr>
+          <ul>
+            <li><a href="./simulador.html">calcular seu IMC</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>About</h4>
+          <hr>
+          <ul>
+            <li><a href="./about.html">sobre mim</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Redes Socias</h4>
+          <hr>
+          <div class="social-links">
+            <li><a href="https://web.facebook.com/guilherme.victorinodossantos.5/"><img
+                  src="./assets/imgs/icon-facebook.png" width="23%"></a></li>
+            <li><a href="https://www.instagram.com/guivicsan/"><img src="./assets/imgs/icon-instagram.png"
+                  width="50%"></a></li>
+            <li><a href="https://github.com/Guivicsan"><img src="./assets/imgs/icon-github.png" width="60%"></a></li>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+</body>
 
-      <div id="alimentacao" class="conatiner-exerc">
-          <div class="box-exercise">
-              <div class="box-exerc-text">
-                  <h2>Importância da Alimentação</h2>
-                  <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Pellentesque aliquet turpis nulla, eleifend faucibus est
-                      sollicitudin ut. Maecenas ut venenatis ex, et dapibus purus Donec
-                      sit
-                    </p>
-                </div>
-            </div>
-            <img src="./assets/imgs/food.png" class="img-exerc" />
-      </div>
-    </section>
-    <!----------footer------------->
-    <section class="footer">
-      <div class="conatiner">
-        <div class="fileira">
-          <div class="footer-col">
-            <h4>Home</h4>
-            <hr>
-            <ul>
-              <li><a href="#exercicios">exercícios</a></li>
-              <li><a href="#alimentacao">alimentação</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Simulador</h4>
-            <hr>
-            <ul>
-              <li><a href="./simulador.html">calcular seu IMC</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>About</h4>
-            <hr>
-            <ul>
-              <li><a href="./about.html">sobre mim</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Redes Socias</h4>
-            <hr>
-            <div class="social-links">
-              <li><a href="https://web.facebook.com/guilherme.victorinodossantos.5/"><img src="./assets/imgs/icon-facebook.png" width="23%"></a></li>
-              <li><a href="https://www.instagram.com/guivicsan/"><img src="./assets/imgs/icon-instagram.png" width="50%"></a></li>
-              <li><a href="https://github.com/Guivicsan"><img src="./assets/imgs/icon-github.png" width="60%"></a></li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </body>
 </html>
