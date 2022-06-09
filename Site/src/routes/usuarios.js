@@ -70,6 +70,13 @@ router.post("/cadastrar_braco_ava", function (req, res) {
     usuarioController.cadastrar_braco_ava(req, res);
 });
 
+router.post("/cadastrar_perna_ini", function (req, res) {
+    usuarioController.cadastrar_perna_ini(req, res);
+});
+
+router.post("/cadastrar_costas_inter", function (req, res) {
+    usuarioController.cadastrar_costas_inter(req, res);
+});
 
 //-----------rota refeições post----------------//
 

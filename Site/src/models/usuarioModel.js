@@ -12,7 +12,7 @@ function listar() {
 function entrar(email, senha) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
     var instrucao = `
-        SELECT * FROM usuario WHERE email = '${email}' AND senha = '${senha}';
+    SELECT * FROM usuario WHERE email = '${email}' AND senha = aes_encrypt('${senha}', 'fitness');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -25,7 +25,7 @@ function cadastrar(nome, email, senha) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO usuario (nome, email, senha) VALUES ('${nome}', '${email}', '${senha}');
+        INSERT INTO usuario (nome, email, senha) VALUES ('${nome}', '${email}', aes_encrypt('${senha}', 'fitness'));
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -67,6 +67,32 @@ function cadastrar_braco_ava(idUsuarioLogado){
     var instrucao = `
     insert into exercicios (nomeExerc, dificuldade, horaExerc, fkUsuarioExerc) values
         ('Braço', 'Avançado', now(), ${idUsuarioLogado});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function cadastrar_perna_ini(idUsuarioLogado){
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrado_sucesso():", idUsuarioLogado);
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+    insert into exercicios (nomeExerc, dificuldade, horaExerc, fkUsuarioExerc) values
+        ('Perna', 'Iniciante', now(), ${idUsuarioLogado});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function cadastrar_costas_inter(idUsuarioLogado){
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrado_sucesso():", idUsuarioLogado);
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+    insert into exercicios (nomeExerc, dificuldade, horaExerc, fkUsuarioExerc) values
+        ('Costas e Ombros', 'Intermediário', now(), ${idUsuarioLogado});
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -184,6 +210,8 @@ module.exports = {
     qtdExerc,
     diaExerc_semana,
     qtdExerc_diario,
+    cadastrar_perna_ini,
+    cadastrar_costas_inter,
 //------------refeições--------------//
     cadastrar_omelete,    
     lista_all_refeicoes,

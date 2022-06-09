@@ -1,6 +1,3 @@
-// const Query = require("mysql2/typings/mysql/lib/protocol/sequences/Query");
-
-// window.onload = diaExercicio_semana()
 
 var id_usuario = sessionStorage.ID_USUARIO;
 
@@ -9,7 +6,7 @@ function listar_exercicios() {
         .then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
-                    //   alert('ERRO ULTIMO CAPTURADO!');
+                    //   alert('erro na função listar_exercícios!');
                 }
                 resposta.json().then(function (resposta) {
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
@@ -124,13 +121,71 @@ function cadastrar_braco_ava() {
     return false;
 }
 
+function cadastrar_perna_ini() {
+    var id_usuarioVar = sessionStorage.ID_USUARIO;
+
+    fetch("/usuarios/cadastrar_perna_ini", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idUsuarioServer: id_usuarioVar
+        }),
+    })
+        .then(function (resposta) {
+
+            if (resposta.ok) {
+                window.alert('Exercicio finalizado com sucesso');
+            } else {
+                window.alert("Houve um erro ao tentar finalizar o exercícios!");
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+    return false;
+}
+
+function cadastrar_costas_inter() {
+    var id_usuarioVar = sessionStorage.ID_USUARIO;
+
+    fetch("/usuarios/cadastrar_costas_inter", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idUsuarioServer: id_usuarioVar
+        }),
+    })
+        .then(function (resposta) {
+
+            if (resposta.ok) {
+                window.alert('Exercicio finalizado com sucesso');
+            } else {
+                window.alert("Houve um erro ao tentar finalizar o exercícios!");
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+    return false;
+}
+
 
 function qtdExercicio() {
     fetch(`/usuarios/qtdExerc/${id_usuario}`)
         .then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
-                    //   alert('ERRO ULTIMO CAPTURADO!');
+                    //   alert('erro na função diaExercicio');
                 }
                 resposta.json().then(function (resposta) {
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
@@ -143,12 +198,10 @@ function qtdExercicio() {
                         <h2>Total</h2>
                         <span>${query.qtdexerc}</span>
                   `
-
-
                     }
                 });
             } else {
-                throw "Houve um erro na função ultimo_pokemon_capturado, linha 181!";
+                throw "Houve um erro na função qtdExercício!";
             }
         })
         .catch(function (resposta) {
@@ -162,7 +215,7 @@ function diaExercicio_semana() {
         .then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
-                    //   alert('ERRO ULTIMO CAPTURADO!');
+                    //   alert('erro na função diaExercicio_semana!');
                 }
                 resposta.json().then(function (resposta) {
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
@@ -214,7 +267,7 @@ function diaExercicio_semana() {
                         }
                     });
             } else {
-                throw "Houve um erro na função ultimo_pokemon_capturado, linha 181!";
+                throw "Houve um erro na função diaExercicio_semana!";
             }
         })
         .catch(function (resposta) {
@@ -228,7 +281,7 @@ function qtdExercicio_diario() {
         .then(function (resposta) {
             if (resposta.ok) {
                 if (resposta.status == 204) {
-                    //   alert('ERRO ULTIMO CAPTURADO!');
+                    //   alert('erro na função qtdExercicio_diario!');
                 }
                 resposta.json().then(function (resposta) {
                     console.log("Dados recebidos: ", JSON.stringify(resposta));
