@@ -12,12 +12,12 @@ CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	senha varbinary(150)
 );
 
 create table refeicoes (
 	idRefeicao int primary key auto_increment,
-    nomeRef varchar (50),
+    nomeRef varchar (100),
     tipo char (13), constraint checktipo check (tipo = 'Café da manhã' or tipo = 'Almoço' or tipo = 'Café da tarde' or tipo = 'Janta'),
     horaRef datetime,
     fkUsuarioRef int,
@@ -26,7 +26,7 @@ create table refeicoes (
 
 create table exercicios (
 	idExercicio int primary key auto_increment,
-    nomeExerc varchar (50),
+    nomeExerc varchar (100),
     dificuldade char (13), constraint chekdif check (dificuldade = 'iniciante' or dificuldade = 'intermediario' or dificuldade = 'avancado'),
     horaExerc datetime,
     fkUsuarioExerc int,

@@ -82,7 +82,7 @@ function cadastrar_peito_inter() {
             if (resposta.ok) {
                 window.alert('Exercicio finalizado com sucesso');
             } else {
-                window.alert("Houve um erro ao tentar finalizar o exercícios!");
+                window.alert("Houve um erro ao tentar finalizar o exercício!");
             }
         })
         .catch(function (resposta) {
@@ -179,6 +179,35 @@ function cadastrar_costas_inter() {
     return false;
 }
 
+function cadastrar_abs_ava() {
+    var id_usuarioVar = sessionStorage.ID_USUARIO;
+
+    fetch("/usuarios/cadastrar_abs_ava", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idUsuarioServer: id_usuarioVar
+        }),
+    })
+        .then(function (resposta) {
+
+            if (resposta.ok) {
+                window.alert('Exercicio finalizado com sucesso');
+            } else {
+                window.alert("Houve um erro ao tentar finalizar o exercícios!");
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+    return false;
+}
+
 
 function qtdExercicio() {
     fetch(`/usuarios/qtdExerc/${id_usuario}`)
@@ -228,44 +257,22 @@ function diaExercicio_semana() {
                         var qtd_Exerc_semana = query.qtdExercDia;
 
                         if (dia_da_semana == 0) {
-                            sessionStorage.setItem(
-                                "domingo",
-                               qtd_Exerc_semana 
-                            );
+                            sessionStorage.setItem("domingo", qtd_Exerc_semana);
                         } else if (dia_da_semana == 1) {
-                            sessionStorage.setItem(
-                                "segunda",
-                               qtd_Exerc_semana 
-                            );
+                            sessionStorage.setItem("segunda", qtd_Exerc_semana);
                         } else if (dia_da_semana == 2) {
-                            sessionStorage.setItem(
-                                "terça",
-                               qtd_Exerc_semana 
-                            );
+                            sessionStorage.setItem("terça", qtd_Exerc_semana);
                         } else if (dia_da_semana == 3) {
-                            sessionStorage.setItem(
-                                "quarta",
-                               qtd_Exerc_semana 
-                            );
+                            sessionStorage.setItem("quarta", qtd_Exerc_semana);
                         } else if (dia_da_semana == 4) {
-                            sessionStorage.setItem(
-                                "quinta",
-                               qtd_Exerc_semana 
-                            );
+                            sessionStorage.setItem("quinta", qtd_Exerc_semana);
                         } else if (dia_da_semana == 5) {
-                            sessionStorage.setItem(
-                                "sexta",
-                               qtd_Exerc_semana 
-                            );
+                            sessionStorage.setItem("sexta", qtd_Exerc_semana);
                         } else if (dia_da_semana == 6) {
-                            sessionStorage.setItem(
-                                "sabado",
-                               qtd_Exerc_semana 
-                            );
-
-                            }
+                            sessionStorage.setItem("sabado", qtd_Exerc_semana);
                         }
-                    });
+                    }
+                });
             } else {
                 throw "Houve um erro na função diaExercicio_semana!";
             }
@@ -294,29 +301,22 @@ function qtdExercicio_diario() {
                         var qtd_Exerc_diario = query.qtdExercDia;
 
                         if (totaldiario == 0) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
-                                                   
+                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario
                         } else if (totaldiario == 1) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
-        
+                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario
                         } else if (totaldiario == 2) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
-                            
+                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario
                         } else if (totaldiario == 3) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
-                            
+                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario
                         } else if (totaldiario == 4) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
-                            
+                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario
                         } else if (totaldiario == 5) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
-                            
+                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario
                         } else if (totaldiario == 6) {
-                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario    
-
-                            }
+                            span_totalDiarioExerc.innerHTML = qtd_Exerc_diario
                         }
-                    });
+                    }
+                });
             } else {
                 throw "Houve um erro na função qtdExercicio_diario!";
             }

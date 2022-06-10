@@ -78,10 +78,30 @@ router.post("/cadastrar_costas_inter", function (req, res) {
     usuarioController.cadastrar_costas_inter(req, res);
 });
 
+router.post("/cadastrar_abs_ava", function (req, res) {
+    usuarioController.cadastrar_abs_ava(req, res);
+});
+
 //-----------rota refeições post----------------//
 
 router.post("/cadastrar_omelete", function (req, res) {
     usuarioController.cadastrar_omelete(req, res);
+});
+
+router.post("/cadastrar_strogonoff", function (req, res) {
+    usuarioController.cadastrar_strogonoff(req, res);
+});
+
+router.post("/cadastrar_sanduiche_atum", function (req, res) {
+    usuarioController.cadastrar_sanduiche_atum(req, res);
+});
+
+router.post("/cadastrar_peito_frango", function (req, res) {
+    usuarioController.cadastrar_peito_frango(req, res);
+});
+
+router.post("/cadastrar_pao_ovos", function (req, res) {
+    usuarioController.cadastrar_pao_ovos(req, res);
 });
 
 module.exports = router;

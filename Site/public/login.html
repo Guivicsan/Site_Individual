@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../public/assets/imgs/Logo.png" type="image/x-icon" />
 
-    <title>AcquaTec | Cadastro</title>
+    <title>LOGIN</title>
 
     <script src="./js/funcoes.js"></script>
 
-    <!-- <link rel="icon" href="./assets/icon/favicon.ico"> -->
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,12 +25,12 @@
     <div class="container">
         <section class="header">
         <nav>
-            <a href="index.html"><img src="./assets/imgs/Logo.png" /></a>
+            <a class="logo_site" href="index.html"><span>VICFIT</span><img src="./assets/imgs/Logo.png" /></a>
             <div class="nav-links">
                 <ul>
                     <li><a href="./index.html">HOME</a></li>
                     <li><a href="./simulador.html">SIMULADOR</a></li>
-                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./about.html">SOBRE</a></li>
                     <li><a href="./login.html">SIGN IN</a></li>
                     <li><a href="./cadastro.html">SIGN UP</a></li>
                 </ul>
@@ -46,12 +46,9 @@
         <div class="sigbup-box">
             <div class="col-2">
                 <h2>Login</h2><br>
-                <!-- <h3>Seja bem vindo de volta!</h3><br> -->
                 <span>Não tem uma conta? <a href="./cadastro.html">Cadastrar</a></span><br>
                 <br>
                 <div class="boxInput">
-                    <!-- <label>Set name</label>
-                    <input id="nome_input" type="name" placeholder="Enter your name" class="input-field"> -->
 
                     <label>Seu email</label>
                     <input id="email_input" type="email" placeholder="Digite seu email" class="input-field">
@@ -64,12 +61,12 @@
                     <img src="./assets/imgs/carregando.gif" id="loading-gif">
                 </div>
                 
-                <div id="div_erros_login">
+                <div style="color: #fff;" id="div_erros_login">
                     
                 </div>
             </div>
             <div class="col-1">
-                <img src="./assets/imgs/image.png">
+                <img src="./assets/imgs/image.png"> 
             </div>
         </div>
     </section>
@@ -89,7 +86,7 @@
 
         if (emailVar == "" || senhaVar == "") {
             cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            mensagem_erro.innerHTML = "Preencha todos os campos";
             finalizarAguardar();
             return false;
         }
@@ -124,7 +121,6 @@
                     sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
-                        // window.location = "./dashboard/teste.html";
                         window.location = "./dashboard/relatorio.html";
                     }, 1000); // apenas para exibir o loading
 

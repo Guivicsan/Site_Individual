@@ -236,6 +236,34 @@ function cadastrar_costas_inter(req, res) {
     }
 }
 
+function cadastrar_abs_ava(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idUsuarioLogado = req.body.idUsuarioServer;
+
+    // Faça as validações dos valores
+    if (idUsuarioLogado == undefined) {
+        res.status(400).send("Seu usuario está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar_abs_ava(idUsuarioLogado)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 function listar_all_exercicios(req, res) {
     var id_usuario = req.params.id_usuario;
     usuarioModel.listar_all_exercicios(id_usuario).then(function (resultado) {
@@ -342,6 +370,118 @@ function cadastrar_omelete(req, res) {
     }
 }
 
+function cadastrar_strogonoff(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idUsuarioLogado = req.body.idUsuarioServer;
+
+    // Faça as validações dos valores
+    if (idUsuarioLogado == undefined) {
+        res.status(400).send("Seu usuario está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar_strogonoff(idUsuarioLogado)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+function cadastrar_sanduiche_atum(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idUsuarioLogado = req.body.idUsuarioServer;
+
+    // Faça as validações dos valores
+    if (idUsuarioLogado == undefined) {
+        res.status(400).send("Seu usuario está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar_sanduiche_atum(idUsuarioLogado)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+function cadastrar_peito_frango(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idUsuarioLogado = req.body.idUsuarioServer;
+
+    // Faça as validações dos valores
+    if (idUsuarioLogado == undefined) {
+        res.status(400).send("Seu usuario está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar_peito_frango(idUsuarioLogado)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
+function cadastrar_pao_ovos(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var idUsuarioLogado = req.body.idUsuarioServer;
+
+    // Faça as validações dos valores
+    if (idUsuarioLogado == undefined) {
+        res.status(400).send("Seu usuario está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrar_pao_ovos(idUsuarioLogado)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 function qtdRef(req, res) {
     var id_usuario = req.params.id_usuario;
     usuarioModel.qtdRef(id_usuario).then(function (resultado) {
@@ -401,10 +541,15 @@ module.exports = {
     qtdExerc_diario,
     cadastrar_perna_ini,
     cadastrar_costas_inter,
+    cadastrar_abs_ava,
 // ------------- Refeçoes ------------//
     lista_all_refeicoes,
     cadastrar_omelete,
     qtdRef,
     diaRef_semana,
-    qtdRef_diario
+    qtdRef_diario,
+    cadastrar_strogonoff,
+    cadastrar_sanduiche_atum,
+    cadastrar_peito_frango,
+    cadastrar_pao_ovos,
 }

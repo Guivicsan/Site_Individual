@@ -1,122 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/refeicao.css">
-    <script src="../js/funcoes.js"></script>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
-    rel="stylesheet"
-  />
-      <!-- scripts do Chart.js -->
-      <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="../public/assets/imgs/Logo.png" type="image/x-icon" />
+  <title>Refeições</title>
+  <link rel="stylesheet" href="../css/refeicao.css">
+  <script src="../js/funcoes.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <!-- scripts do Chart.js -->
+  <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 
 </head>
+
 <body>
-<!-- onload="validarSessao(), atualizarFeed()" -->
-    <section class="exercicio">
-            <div class="barra-lateral">
-                <div class="logo">
-                    <img src="../assets/imgs/Logo.png">
-                </div>
-                <div class="container-lateral">
-               <a href="relatorio.html">
-                   <img src="../assets/imgs/procurar.png"><p>Relatório</p>
-                </a>
-               <a href="dashboard-2.html">
-                   <img src="../assets/imgs/graph.png"><p>Dashboard</p>
-                </a>
-               <a href="exercicios.html">
-                   <img src="../assets/imgs/excercise.png"><p>Exercícios</p>
-                </a>
-               <a href="refeicao.html">
-                   <img src="../assets/imgs/dish.png"><p>Refeições</p>
-                </a>
-               <!-- <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button> -->
-            </div>
-            <div class="sair" onclick="limparSessao()"><img src="../assets/imgs/log-out.png"><p>Sair</p></div>
-            </div>
-            <div class="box-exerc">
-              <div class="navbar-dash">
-                <div class="navbar-text">
-                  <h1>Refeições</h1>
-                </div>
-                <span id="b_usuario">usuário</span><img src="../assets/imgs/user.png" alt="">
+  <!-- onload="validarSessao(), atualizarFeed()" -->
+  <section class="exercicio">
+    <div class="barra-lateral">
+      <div class="logo">
+        <span>VICFIT</span><img src="../assets/imgs/Logo.png">
+      </div>
+      <div class="container-lateral">
+        <a href="relatorio.html">
+          <img src="../assets/imgs/procurar.png">
+          <p>Relatório</p>
+        </a>
+        <a href="dashboard-2.html">
+          <img src="../assets/imgs/graph.png">
+          <p>Dashboard</p>
+        </a>
+        <a href="exercicios.html">
+          <img src="../assets/imgs/excercise.png">
+          <p>Exercícios</p>
+        </a>
+        <a href="refeicao.html">
+          <img src="../assets/imgs/dish.png">
+          <p style="color: #f44336;">Refeições</p>
+        </a>
+        <!-- <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button> -->
+      </div>
+      <div class="sair" onclick="limparSessao()"><img src="../assets/imgs/log-out.png">
+        <p>Sair</p>
+      </div>
+    </div>
+    <div class="box-exerc">
+      <div class="navbar-dash">
+        <div class="navbar-text">
+          <h1>Refeições</h1>
+        </div>
+        <span id="b_usuario">usuário</span><img src="../assets/imgs/user.png" alt="">
+      </div>
+      <section class="exercisecard">
+        <h1>Receitas</h1>
+        <div class="exercise">
+          <div class="sobrenos-col">
+            <a href="receita.html">
+              <img src="../assets/imgs/Vegetable Omelette.jpg" alt="">
+              <div class="exerciseText">
+                <p>CAFÉ DA MANHÃ</p>
+                <span>Omelete de legumes</span>
               </div>
-                <section class="exercisecard">
-                      <h1>Receitas</h1>
-                        <div class="exercise">
-                          <div class="sobrenos-col">
-                            <a href="receita.html">
-                            <img src="../assets/imgs/Vegetable Omelette.jpg" alt="">
-                            <div class="exerciseText">
-                              <p>CAFÉ DA MANHÃ</p>
-                              <span>Omelete de legumes</span>
-                          </div>
-                            </a>
-                        </div>
-                          <div class="sobrenos-col">
-                            <img src="../assets/imgs/food.png" alt="">
-                            <div class="exerciseText">
-                              <p>ALMOÇO</p>
-                              <span>Lorem inpsun</span>
-                            </div>
-                          </div>
-                          <div class="sobrenos-col">
-                            <img src="../assets/imgs/food.png" alt="">
-                            <div class="exerciseText">
-                              <p>CAFÉ DA TARDE</p>
-                              <span>Lorem inpsun</span>
-                            </div>
-                          </div>
-                          <div class="sobrenos-col">
-                            <img src="../assets/imgs/food.png" alt="">
-                            <div class="exerciseText">
-                              <p>JANTA</p>
-                              <span>Lorem inpsun</span>
-                            </div>
-                          </div>
-                        </div>
-                        <hr>
-                        <div class="exercise">
-                          <div class="sobrenos-col">
-                            <img src="../assets/imgs/food.png" alt="">
-                            <div class="exerciseText">
-                              <p>CAFÉ DA MANHÃ</p>
-                              <span>Lorem inpsun</span>
-                          </div>
-                        </div>
-                          <div class="sobrenos-col">
-                            <img src="../assets/imgs/food.png" alt="">
-                            <div class="exerciseText">
-                              <p>ALMOÇO</p>
-                              <span>Lorem inpsun</span>
-                            </div>
-                          </div>
-                          <div class="sobrenos-col">
-                            <img src="../assets/imgs/food.png" alt="">
-                            <div class="exerciseText">
-                              <p>CAFÉ DA TARDE</p>
-                              <span>Lorem inpsun</span>
-                            </div>
-                          </div>
-                          <div class="sobrenos-col">
-                            <img src="../assets/imgs/food.png" alt="">
-                            <div class="exerciseText">
-                              <p>JANTA</p>
-                              <span>Lorem inpsun</span>
-                            </div>
-                          </div>
-                        </div>
-                      </section>       
+            </a>
+          </div>
+          <div class="sobrenos-col">
+            <a href="strogonoff.html">
+              <img src="../assets/imgs/Receita - strogonoff" alt="">
+              <div class="exerciseText">
+                <p>ALMOÇO</p>
+                <span>Strogonoff saudável</span>
+              </div>
+            </a>
+          </div>
+          <div class="sobrenos-col">
+            <a href="sanduiche_atum.html">
+              <img src="../assets/imgs/receita - sanduiche de atum" alt="">
+              <div class="exerciseText">
+                <p>CAFÉ DA TARDE</p>
+                <span>Sanduíche de atum</span>
+              </div>
+            </a>
+          </div>
+          <div class="sobrenos-col">
+            <a href="peito_frango.html">
+              <img src="../assets/imgs/frango-refogado-1.png" alt="">
+              <div class="exerciseText">
+                <p>JANTA</p>
+                <span>Peito de frango refogado com molho de tomate natural</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <hr>
+        <div class="exercise">
+          <div class="sobrenos-col">
+            <a href="ovos.html">
+              <img src="../assets/imgs/café-da-manhã-para-perder-peso-p.jpg" alt="">
+              <div class="exerciseText">
+                <p>CAFÉ DA MANHÃ</p>
+                <span>Pão com ovos mexidos</span>
+              </div>
+            </a>
+          </div>
+          <div class="sobrenos-col">
+            <img src="../assets/imgs/file-de-peixe-grelhado-simples-00-730x480.jpg" alt="">
+            <div class="exerciseText">
+              <p>ALMOÇO</p>
+              <span>Filé de peixe grelhado simples</span>
             </div>
-    </section>
+          </div>
+          <div class="sobrenos-col">
+            <img src="../assets/imgs/granola e iogurte" alt="">
+            <div class="exerciseText">
+              <p>CAFÉ DA TARDE</p>
+              <span>Iogurte com granola e frutas</span>
+            </div>
+          </div>
+          <div class="sobrenos-col">
+            <img src="../assets/imgs/macarrao.jpg" alt="">
+            <div class="exerciseText">
+              <p>JANTA</p>
+              <span>Macarrão fitness</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
 </body>
+
 </html>
 
 <script>
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+  b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 </script>

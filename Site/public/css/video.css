@@ -19,9 +19,14 @@
   }
   .logo {
     text-align: center;
-    padding: 15px;
+    padding: 6px;
     background-color: #1f1f1f;
     width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
   }
   .logo img {
       width: 80px;
@@ -98,9 +103,6 @@
         box-sizing: border-box;
         flex-basis: 76.5%;
         box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 20%);
-        background-image: url(../assets/imgs/Ab-1.jpg);
-        background-position: center;
-        background-size: cover;
     }
     .detalhes-treino {
         background-color: #2e2e2e;

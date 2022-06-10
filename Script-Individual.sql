@@ -6,13 +6,13 @@ CREATE TABLE usuario (
 	idUsuario INT PRIMARY KEY AUTO_INCREMENT,
 	nome VARCHAR(50),
 	email VARCHAR(50),
-	senha VARCHAR(50)
+	senha varbinary(150)
 );
 
 create table refeicoes (
 	idRefeicao int primary key auto_increment,
     nomeRef varchar (50),
-    tipo char (11), constraint checkTipo check (tipo = 'Café da manhã' or tipo = 'Almoço' or tipo = 'Café da tarde' or tipo = 'Janta'),
+    tipo char (50), constraint checkTipo check (tipo = 'Café da manhã' or tipo = 'Almoço' or tipo = 'Café da tarde' or tipo = 'Janta'),
     horaRef datetime,
     fkUsuarioRef int,
     foreign key (fkUsuarioRef) references usuario (idUsuario)
